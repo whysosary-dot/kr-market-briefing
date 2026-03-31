@@ -3,55 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>국장 마감 브리핑 아카이브</title>
+<title>🇰🇷 KR Market Closing Briefing</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
-  :root { --ink: #0f172a; --slate2: #64748b; --slate3: #94a3b8; --slate5: #e2e8f0; --white: #ffffff; --blue: #2563eb; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Noto Sans KR', sans-serif; background: #e2e8f0; color: var(--ink); min-height: 100vh; }
-  .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-  .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); border-radius: 12px; padding: 28px 32px; margin-bottom: 24px; color: #fff; }
-  .header h1 { font-size: 22pt; font-weight: 900; margin-bottom: 6px; }
-  .header p { font-size: 10pt; color: #94a3b8; }
-  .card { background: var(--white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 24px; margin-bottom: 12px; transition: transform 0.15s, box-shadow 0.15s; }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-  .card a { text-decoration: none; color: inherit; display: flex; justify-content: space-between; align-items: center; }
-  .card-date { font-size: 14pt; font-weight: 800; }
-  .card-day { font-size: 9pt; color: var(--slate2); margin-top: 2px; }
-  .card-arrow { font-size: 18pt; color: var(--blue); }
-  .empty { text-align: center; padding: 60px 20px; color: var(--slate3); font-size: 11pt; }
-  .footer { text-align: center; padding: 20px; font-size: 8pt; color: var(--slate3); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0b1622;
+    color: #dde6f0;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 2px solid #3b82f6;
+    margin-bottom: 28px;
+  }
+  .header h1 { font-size: 26px; font-weight: 800; color: #e8f4ff; letter-spacing: -0.5px; }
+  .header p { font-size: 13px; color: #8ba8bf; margin-top: 6px; }
+  .list { max-width: 760px; margin: 0 auto; }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111f2e;
+    border: 1px solid #1e3a52;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .item:hover { background: #16293d; border-color: #3b82f6; }
+  .item.new { border-left: 3px solid #dc2626; }
+  .item-date { font-size: 15px; font-weight: 700; color: #e8f4ff; }
+  .item-sub { font-size: 11px; color: #8ba8bf; margin-top: 3px; }
+  .badge-new {
+    background: #dc2626;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .badge-link {
+    color: #3b82f6;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 11px;
+    color: #4a6a85;
+  }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <h1>국장 마감 브리핑 아카이브</h1>
-    <p>매일 장 마감 후 자동 생성 · GitHub Pages 배포</p>
-  </div>
-  <div id="briefing-list"></div>
-  <div class="footer"><p>자동 생성 by Claude · 데이터 출처: Yahoo Finance</p></div>
+<div class="header">
+  <h1>🇰🇷 KR Market Closing Briefing</h1>
+  <p>매일 오후 5시 — 한국 시장 장 마감 요약 브리핑 (IB 스타일 3페이지 A4)</p>
 </div>
+
+<div class="list" id="briefing-list"></div>
+
+<div class="footer">
+  ⚠️ 자동 생성 브리핑 — 투자 권유가 아닙니다 &nbsp;|&nbsp; Data: Yahoo Finance (yfinance)
+</div>
+
 <script>
-  const DAYS = ['일','월','화','수','목','금','토'];
-  async function loadBriefings() {
-    const container = document.getElementById('briefing-list');
-    try {
-      const res = await fetch('briefings/manifest.json');
-      const data = await res.json();
-      if (!data.briefings || data.briefings.length === 0) { container.innerHTML = '<div class="empty">아직 브리핑이 없습니다.</div>'; return; }
-      data.briefings.sort((a, b) => b.date.localeCompare(a.date));
-      data.briefings.forEach(b => {
-        const d = new Date(b.date + 'T00:00:00+09:00');
-        const dayName = DAYS[d.getDay()];
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = '<a href="briefings/' + b.file + '"><div><div class="card-date">' + b.date + '</div><div class="card-day">' + dayName + '요일</div></div><div class="card-arrow">&rarr;</div></a>';
-        container.appendChild(card);
-      });
-    } catch (e) { container.innerHTML = '<div class="empty">브리핑 목록을 불러올 수 없습니다.</div>'; }
-  }
-  loadBriefings();
+// b 배열: 최신 항목이 맨 앞, n:true는 최신 1개에만 표시
+const b = [
+  { d: "2026-03-31", label: "2026년 3월 31일 (화)", sub: "3/31 마감 — KOSPI / KOSDAQ / 원달러 환율 / 주요 섹터 동향", n: true },
+];
+
+const list = document.getElementById('briefing-list');
+b.forEach(item => {
+  const a = document.createElement('a');
+  a.className = 'item' + (item.n ? ' new' : '');
+  a.href = `briefings/kr-market-closing-${item.d}.html`;
+  a.innerHTML = `
+    <div>
+      <div class="item-date">${item.label}</div>
+      <div class="item-sub">${item.sub}</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      ${item.n ? '<span class="badge-new">NEW</span>' : ''}
+      <span class="badge-link">브리핑 보기 →</span>
+    </div>
+  `;
+  list.appendChild(a);
+});
 </script>
 </body>
 </html>
