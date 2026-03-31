@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국장 마감 브리핑 아카이브</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  :root { --ink: #0f172a; --slate2: #64748b; --slate3: #94a3b8; --white: #ffffff; --blue: #2563eb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #e2e8f0; color: var(--ink); min-height: 100vh; }
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+  .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); border-radius: 12px; padding: 28px 32px; margin-bottom: 24px; color: #fff; }
+  .header h1 { font-size: 22pt; font-weight: 900; margin-bottom: 6px; }
+  .header p { font-size: 10pt; color: #94a3b8; }
+  .card { background: var(--white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 24px; margin-bottom: 12px; transition: transform 0.15s, box-shadow 0.15s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+  .card a { text-decoration: none; color: inherit; display: flex; justify-content: space-between; align-items: center; }
+  .card-date { font-size: 14pt; font-weight: 800; }
+  .card-day { font-size: 9pt; color: var(--slate2); margin-top: 2px; }
+  .card-arrow { font-size: 18pt; color: var(--blue); }
+  .empty { text-align: center; padding: 60px 20px; color: var(--slate3); font-size: 11pt; }
+  .footer { text-align: center; padding: 20px; font-size: 8pt; color: var(--slate3); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>국장 마감 브리핑 아카이브</h1>
+    <p>매일 장 마감 후 자동 생성 · GitHub Pages 배포</p>
+  </div>
+  <div id="briefing-list"></div>
+  <div class="footer"><p>자동 생성 by Claude · 데이터 출처: Yahoo Finance</p></div>
+</div>
+<script>
+  const DAYS = ['일','월','화','수','목','금','토'];
+  async function loadBriefings() {
+    const container = document.getElementById('briefing-list');
+    try {
+      const res = await fetch('briefings/manifest.json');
+      const data = await res.json();
+      if (!data.briefings || data.briefings.length === 0) { container.innerHTML = '<div class="empty">아직 브리핑이 없습니다.</div>'; return; }
+      data.briefings.sort((a, b) => b.date.localeCompare(a.date));
+      data.briefings.forEach(b => {
+        const d = new Date(b.date + 'T00:00:00+09:00');
+        const dayName = DAYS[d.getDay()];
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = '<a href="briefings/' + b.file + '"><div><div class="card-date">' + b.date + '</div><div class="card-day">' + dayName + '요일</div></div><div class="card-arrow">&rarr;</div></a>';
+        container.appendChild(card);
+      });
+    } catch (e) { container.innerHTML = '<div class="empty">브리핑 목록을 불러올 수 없습니다.</div>'; }
+  }
+  loadBriefings();
+</script>
+</body>
+</html>
