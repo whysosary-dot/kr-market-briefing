@@ -8,37 +8,47 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #0b1622;
-    color: #dde6f0;
+    background: #e8ecf1;
+    color: #1a1a2e;
     min-height: 100vh;
-    padding: 24px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px 48px 36px;
   }
   .header {
     text-align: center;
-    padding: 32px 0 24px;
-    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 24px;
+    border-bottom: 3px solid #1a1a2e;
     margin-bottom: 28px;
   }
-  .header h1 { font-size: 26px; font-weight: 800; color: #e8f4ff; letter-spacing: -0.5px; }
-  .header p { font-size: 13px; color: #8ba8bf; margin-top: 6px; }
-  .list { max-width: 760px; margin: 0 auto; }
+  .header h1 { font-size: 28px; font-weight: 800; color: #1a1a2e; letter-spacing: -0.5px; }
+  .header p { font-size: 13px; color: #7a8a9e; margin-top: 8px; }
+  .list { }
   .item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #111f2e;
-    border: 1px solid #1e3a52;
+    background: #f6f8fa;
+    border: 1px solid #e2e8f0;
     border-radius: 10px;
-    padding: 14px 18px;
+    padding: 16px 20px;
     margin-bottom: 10px;
     text-decoration: none;
     color: inherit;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
   }
-  .item:hover { background: #16293d; border-color: #3b82f6; }
+  .item:hover { background: #eef2f7; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
   .item.new { border-left: 3px solid #dc2626; }
-  .item-date { font-size: 15px; font-weight: 700; color: #e8f4ff; }
-  .item-sub { font-size: 11px; color: #8ba8bf; margin-top: 3px; }
+  .item-date { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+  .item-sub { font-size: 11px; color: #7a8a9e; margin-top: 3px; }
   .badge-new {
     background: #dc2626;
     color: #fff;
@@ -48,32 +58,33 @@
     border-radius: 4px;
   }
   .badge-link {
-    color: #3b82f6;
+    color: #2563eb;
     font-size: 12px;
     font-weight: 600;
   }
   .footer {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 28px;
     font-size: 11px;
-    color: #4a6a85;
+    color: #94a3b8;
   }
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>🇰🇷 KR Market Closing Briefing</h1>
-  <p>매일 오후 5시 — 한국 시장 장 마감 요약 브리핑 (IB 스타일 3페이지 A4)</p>
-</div>
+<div class="container">
+  <div class="header">
+    <h1>🇰🇷 KR Market Closing Briefing</h1>
+    <p>매일 오후 5시 — 한국 시장 장 마감 요약 브리핑 (IB 스타일 3페이지 A4)</p>
+  </div>
 
-<div class="list" id="briefing-list"></div>
+  <div class="list" id="briefing-list"></div>
 
-<div class="footer">
-  ⚠️ 자동 생성 브리핑 — 투자 권유가 아닙니다 &nbsp;|&nbsp; Data: Yahoo Finance (yfinance)
+  <div class="footer">
+    ⚠️ 자동 생성 브리핑 — 투자 권유가 아닙니다 &nbsp;|&nbsp; Data: Yahoo Finance (yfinance)
+  </div>
 </div>
 
 <script>
-// b 배열: 최신 항목이 맨 앞, n:true는 최신 1개에만 표시
 const b = [
   { d: "2026-03-31", label: "2026년 3월 31일 (화)", sub: "3/31 마감 — KOSPI / KOSDAQ / 원달러 환율 / 주요 섹터 동향", n: true },
 ];
