@@ -86,7 +86,8 @@
 
 <script>
 const b = [
-  { d: "2026-04-01", label: "2026년 4월 1일 (수)", sub: "4/1 마감 — KOSPI +8.44% 역대 2위 폭등 / KOSDAQ +6.06% / 원달러 1,506원 / 반도체 랠리", n: true },
+  { d: "2026-04-02", label: "2026년 4월 2일 (목)", sub: "4/2 마감 — KOSPI -4.47% 급락 / KOSDAQ -5.36% / 원달러 1,515원 / 트럼프 연설 실망 → 종전 랠리 되돌림", n: true, file: "kr-market-briefing-2026-04-02.html" },
+  { d: "2026-04-01", label: "2026년 4월 1일 (수)", sub: "4/1 마감 — KOSPI +8.44% 역대 2위 폭등 / KOSDAQ +6.06% / 원달러 1,506원 / 반도체 랠리", n: false },
   { d: "2026-03-31", label: "2026년 3월 31일 (화)", sub: "3/31 마감 — KOSPI -4.26% 급락 / KOSDAQ -4.94% / 원달러 1,530원 / 이란·반도체 이중 충격", n: false },
 ];
 
@@ -94,7 +95,7 @@ const list = document.getElementById('briefing-list');
 b.forEach(item => {
   const a = document.createElement('a');
   a.className = 'item' + (item.n ? ' new' : '');
-  a.href = `briefings/kr-market-closing-${item.d}.html`;
+  a.href = item.file ? `briefings/${item.file}` : `briefings/kr-market-closing-${item.d}.html`;
   a.innerHTML = `
     <div>
       <div class="item-date">${item.label}</div>
