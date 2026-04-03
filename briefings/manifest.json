@@ -1,6 +1,18 @@
 {
   "briefings": [
     {
+      "date": "2026-04-03",
+      "file": "kr-market-closing-2026-04-03.html"
+    },
+    {
+      "date": "2026-04-02",
+      "file": "kr-market-closing-2026-04-02.html"
+    },
+    {
+      "date": "2026-04-01",
+      "file": "kr-market-closing-2026-04-01.html"
+    },
+    {
       "date": "2026-03-31",
       "file": "kr-market-closing-2026-03-31.html"
     }
