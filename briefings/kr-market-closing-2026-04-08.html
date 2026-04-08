@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국내 시장 장 마감 브리핑 | 2026.04.08</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 12mm; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+  :root {
+    --red: #dc2626; --red-bg: #fef2f2; --red-light: #fee2e2;
+    --blue: #2563eb; --blue-bg: #eff6ff; --blue-light: #dbeafe;
+    --green: #16a34a; --green-bg: #f0fdf4;
+    --amber: #d97706; --amber-bg: #fffbeb;
+    --slate: #334155; --slate2: #64748b; --slate3: #94a3b8;
+    --slate4: #cbd5e1; --slate5: #e2e8f0; --slate6: #f1f5f9;
+    --white: #ffffff; --ink: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important; }
+  body { font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    color: var(--ink); background: var(--white); font-size: 9pt; line-height: 1.5; }
+  .page { width: 186mm; max-width: 186mm; margin: 0 auto; }
+  .page-break { page-break-before: always; }
+  .nb { page-break-inside: avoid; break-inside: avoid; }
+  @media screen {
+    body { background: #e2e8f0; padding: 24px 0; }
+    .page { background: #fff; padding: 10mm 12mm; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 6px; margin-bottom: 20px; }
+  }
+  @media print {
+    .page { width: 100%; max-width: 100%; padding: 0; }
+    .gauge-track,.gauge-ptr,.hdr,.hero,.hero-icon,
+    .kpi,.kpi.pos,.kpi.neg,.kpi.neu,.sb,.sb.up,.sb.dn,.sec-vis .mid,
+    .pct-pill,.pct-pill.up,.pct-pill.dn,.ix::after,.ix.dn::after,.ix.up::after,
+    .ins::before,.ins.i-blue::before,.ins.i-red::before,.ins.i-green::before,.ins.i-amber::before,
+    .sent-badge,.sent-mode,.ix-t,.tag,.tag.r,.tag.b,.tag.y,.tag.g,
+    .strat-mode,.strat,.bullet,.summ-hdr,.summ-n,.summ-body,
+    .ins-tag,.hdr .dt,.kr-card .kr-hdr,.tbl th,.tbl tr:nth-child(even) td {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important; color-adjust: exact !important; } }
+
+  .hdr { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;
+    display: flex; justify-content: space-between; align-items: center; color: #fff; }
+  .hdr h1 { font-size: 15pt; font-weight: 900; letter-spacing: -0.8px; }
+  .hdr .sub { font-size: 7.5pt; color: #94a3b8; margin-top: 2px; font-weight: 400; }
+  .hdr .dt { background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 14px; border-radius: 20px; font-size: 8pt; font-weight: 700; }
+
+  .hero { background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
+    border: 1.5px solid #86efac; border-radius: 8px;
+    padding: 12px 16px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px; }
+  .hero.red { background: linear-gradient(135deg, #fef2f2 0%, #fff1f2 100%) !important; border-color: #fca5a5; }
+  .hero-icon { width: 36px; height: 36px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; color: #fff; }
+  .hero.red .hero-icon { background: var(--red); }
+  .hero-text { font-size: 8.5pt; color: #166534; line-height: 1.6; }
+  .hero.red .hero-text { color: #991b1b; }
+  .hero-text b { color: var(--green); }
+  .hero.red .hero-text b { color: var(--red); }
+
+  .kpi-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 12px; }
+  .kpi { text-align: center; padding: 8px 4px; border-radius: 6px; border: 1px solid var(--slate5); }
+  .kpi.neg { background: var(--blue-bg); border-color: var(--blue-light); }
+  .kpi.pos { background: var(--red-bg); border-color: var(--red-light); }
+  .kpi.neu { background: var(--slate6); }
+  .kpi-lb { font-size: 6.5pt; font-weight: 700; color: var(--slate3); text-transform: uppercase; letter-spacing: 0.5px; }
+  .kpi-v { font-size: 13pt; font-weight: 900; margin-top: 2px; }
+
+  .top2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .sent { border: 1px solid var(--slate5); border-radius: 8px; padding: 12px 14px; background: var(--white); }
+  .sent-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .sent-badge { font-size: 11pt; font-weight: 900; color: var(--red);
+    background: var(--red-bg); border: 1px solid var(--red-light);
+    padding: 4px 12px; border-radius: 16px; }
+  .sent-mode { font-size: 7.5pt; font-weight: 700; color: var(--red);
+    background: var(--red-bg); border: 1px solid var(--red-light);
+    padding: 3px 10px; border-radius: 12px; }
+  .gauge-wrap { margin-top: 6px; }
+
+  .idx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .ix { border: 1px solid var(--slate5); border-radius: 6px; padding: 8px 10px; position: relative; overflow: hidden; }
+  .ix::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .ix.dn::after { background: var(--blue); }
+  .ix.up::after { background: var(--red); }
+  .ix-n { font-size: 6.5pt; color: var(--slate3); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
+  .ix-v { font-size: 14pt; font-weight: 900; margin: 1px 0; }
+  .ix-c { font-size: 8pt; font-weight: 700; }
+  .ix-t { font-size: 6.5pt; display: inline-block; padding: 1px 5px; border-radius: 3px; font-weight: 700; margin-top: 2px; }
+  .t-dn { background: var(--blue-bg); color: var(--blue); }
+  .t-up { background: var(--red-bg); color: var(--red); }
+  .t-warn { background: var(--amber-bg); color: var(--amber); }
+
+  .stit { font-size: 10pt; font-weight: 900; color: var(--ink);
+    margin-bottom: 6px; padding-bottom: 4px;
+    border-bottom: 2.5px solid var(--ink);
+    display: flex; align-items: center; gap: 6px; }
+
+  .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .mb { margin-bottom: 10px; }
+  .dcard { border: 1px solid var(--slate5); border-radius: 6px; padding: 8px 10px; background: var(--white); }
+  .dcard-t { font-size: 7pt; font-weight: 700; color: var(--slate3); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 5px; }
+  .dr { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; }
+  .dr + .dr { border-top: 1px solid var(--slate6); }
+  .dr-l { font-size: 7.5pt; color: var(--slate2); }
+  .dr-r { font-size: 7.5pt; font-weight: 700; }
+
+  .sec-chart { border: 1px solid var(--slate5); border-radius: 6px; padding: 10px 12px; }
+  .sec-r { display: flex; align-items: center; gap: 6px; padding: 4px 0; }
+  .sec-r + .sec-r { border-top: 1px solid var(--slate6); }
+  .sec-nm { flex: 0 0 80px; font-size: 7.5pt; color: var(--slate2); font-weight: 500; }
+  .sec-vis { flex: 1; display: flex; align-items: center; height: 16px; position: relative; }
+  .sec-vis .mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--slate4); }
+  .sec-bar-c { width: 50%; display: flex; align-items: center; height: 100%; }
+  .sec-bar-c.left { justify-content: flex-end; }
+  .sec-bar-c.right { justify-content: flex-start; }
+  .sb { height: 12px; border-radius: 2px; min-width: 2px; transition: width 0.3s; }
+  .sb.up { background: linear-gradient(90deg, #fca5a5, var(--red)) !important; border-radius: 2px 0 0 2px; }
+  .sb.dn { background: linear-gradient(90deg, var(--blue), #93c5fd) !important; border-radius: 0 2px 2px 0; }
+  .sec-v { flex: 0 0 42px; text-align: right; font-size: 8pt; font-weight: 800; }
+
+  .tbl { width: 100%; border-collapse: collapse; border: 1px solid var(--slate5); border-radius: 6px; overflow: hidden; }
+  .tbl th { font-size: 6.5pt; font-weight: 700; color: var(--slate3); text-transform: uppercase;
+    letter-spacing: 0.4px; padding: 6px 8px; text-align: left;
+    background: var(--slate6); border-bottom: 1.5px solid var(--slate5); }
+  .tbl td { padding: 5px 8px; font-size: 8pt; border-bottom: 1px solid var(--slate6); }
+  .tbl tr:last-child td { border-bottom: none; }
+  .tbl tr:nth-child(even) td { background: #fafbfc; }
+  .tk { font-weight: 900; font-size: 9pt; letter-spacing: 0.3px; }
+  .co { color: var(--slate3); font-size: 6.5pt; font-weight: 500; }
+  .nt { color: var(--slate2); font-size: 7pt; line-height: 1.5; }
+  .pct-pill { display: inline-block; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-size: 8.5pt; }
+  .pct-pill.dn { background: var(--blue-bg); color: var(--blue); }
+  .pct-pill.up { background: var(--red-bg); color: var(--red); }
+
+  .ins { border-radius: 6px; padding: 10px 12px; margin-bottom: 6px;
+    border: 1px solid var(--slate5); position: relative; overflow: hidden; }
+  .ins::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+  .ins.i-blue::before { background: var(--blue); }
+  .ins.i-red::before { background: var(--red); }
+  .ins.i-green::before { background: var(--green); }
+  .ins.i-amber::before { background: var(--amber); }
+  .ins-tag { display: inline-block; font-size: 6pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; padding: 2px 7px; border-radius: 3px; margin-bottom: 4px; }
+  .ins h3 { font-size: 9pt; font-weight: 800; margin-bottom: 3px; line-height: 1.4; }
+  .ins p { font-size: 7.5pt; color: var(--slate2); line-height: 1.65; }
+
+  .strat { border: 2px solid var(--green); border-radius: 8px; padding: 12px 14px;
+    background: linear-gradient(135deg, var(--green-bg) 0%, #fff 100%) !important; }
+  .strat-mode { display: inline-block; background: var(--green); color: #fff;
+    padding: 5px 16px; border-radius: 6px; font-size: 11pt; font-weight: 900;
+    margin-bottom: 10px; letter-spacing: -0.3px; }
+  .strat-list { list-style: none; }
+  .strat-list li { padding: 4px 0; font-size: 8pt; color: var(--slate2);
+    display: flex; gap: 6px; align-items: flex-start; }
+  .strat-list li + li { border-top: 1px solid #bbf7d0; }
+  .strat-list .bullet { display: inline-flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--green); color: #fff; font-size: 6.5pt; font-weight: 800;
+    flex-shrink: 0; margin-top: 1px; }
+
+  .summ { border: 2px solid var(--green); border-radius: 8px; overflow: hidden; }
+  .summ-hdr { background: var(--green); color: #fff; padding: 6px 14px; font-size: 9pt; font-weight: 800; }
+  .summ-body { padding: 10px 14px; background: var(--green-bg); }
+  .summ-item { display: flex; gap: 10px; padding: 6px 0; align-items: flex-start; }
+  .summ-item + .summ-item { border-top: 1px solid #bbf7d0; }
+  .summ-n { width: 24px; height: 24px; border-radius: 50%;
+    background: var(--green); color: #fff; font-size: 10pt; font-weight: 900;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .summ-t { font-size: 8.5pt; font-weight: 600; line-height: 1.65; color: var(--ink); }
+
+  .sched { border: 1px solid var(--slate5); border-radius: 6px; padding: 8px 10px; }
+  .sched .dr-l { font-size: 8pt; }
+  .tag { display: inline-block; font-size: 6pt; font-weight: 700; padding: 2px 6px; border-radius: 8px; }
+  .tag.r { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-light); }
+  .tag.b { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-light); }
+  .tag.y { background: var(--amber-bg); color: var(--amber); border: 1px solid #fde68a; }
+  .tag.g { background: var(--green-bg); color: var(--green); border: 1px solid #bbf7d0; }
+
+  .flow-card { border: 1px solid var(--slate5); border-radius: 6px; overflow: hidden; }
+  .flow-card .flow-hdr { background: var(--slate6); padding: 5px 10px;
+    font-size: 7pt; font-weight: 700; color: var(--slate2); text-transform: uppercase; }
+  .flow-card .flow-body { padding: 6px 10px; }
+  .flow-r { display: grid; grid-template-columns: 70px 1fr auto; gap: 6px;
+    align-items: center; padding: 4px 0; }
+  .flow-r + .flow-r { border-top: 1px solid var(--slate6); }
+  .flow-sec { font-size: 8pt; font-weight: 800; color: var(--ink); }
+  .flow-desc { font-size: 7pt; color: var(--slate2); }
+  .flow-val { font-size: 7.5pt; font-weight: 800; text-align: right; }
+
+  .ftr { text-align: center; padding: 10px 0; margin-top: 8px; border-top: 1.5px solid var(--slate5); }
+  .ftr p { font-size: 6.5pt; color: var(--slate3); line-height: 1.7; }
+  .c-up { color: var(--red); } .c-dn { color: var(--blue); }
+  .c-gn { color: var(--green); } .c-am { color: var(--amber); }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+
+<div class="hdr nb">
+  <div>
+    <h1>🇰🇷 국내 시장 장 마감 브리핑</h1>
+    <div class="sub">오늘(4/8) 국내 시장 종가 기준 · 장 마감 투자 참고 자료</div>
+  </div>
+  <div class="dt">2026. 4. 8 (수)</div>
+</div>
+
+<div class="hero nb">
+  <div class="hero-icon">🚀</div>
+  <div class="hero-text">
+    <b>KOSPI +6.87% 폭등(+377p, 5,872)</b> — WTI 유가 $95대 급락(-15%) · 중동 종전 기대 재점화 · 원달러 1,479원(1,500선 하향 안착).
+    <b>SK하이닉스 +12.77% 100만원 최초 돌파(103.3만원)</b>, 삼성전자 +7.12%(210,500원) · 현대차 +7.40% 동반 랠리.
+    5거래일 연속 상승 마감, VIX -19%로 위험선호 완전 복귀.
+  </div>
+</div>
+
+<div class="kpi-row nb">
+  <div class="kpi pos"><div class="kpi-lb">KOSPI</div><div class="kpi-v c-up">+6.87%</div></div>
+  <div class="kpi pos"><div class="kpi-lb">KOSDAQ</div><div class="kpi-v c-up">+5.12%</div></div>
+  <div class="kpi pos"><div class="kpi-lb">거래대금</div><div class="kpi-v">41.2조</div></div>
+  <div class="kpi neg"><div class="kpi-lb">USD/KRW</div><div class="kpi-v c-dn">1,479</div></div>
+  <div class="kpi pos"><div class="kpi-lb">외국인</div><div class="kpi-v c-up">+2.1조</div></div>
+  <div class="kpi pos"><div class="kpi-lb">기관</div><div class="kpi-v c-up">+1.4조</div></div>
+</div>
+
+<div class="top2 nb mb">
+  <div class="sent">
+    <div class="sent-hdr">
+      <span class="sent-badge">🔥 탐욕</span>
+      <span class="sent-mode">풀 리스크온 복귀</span>
+    </div>
+    <div style="font-size:7.5pt; color:var(--slate2); margin-bottom:8px;">WTI -15% 급락 / VIX 20선 복귀 / 외국인 13거래일 만에 대규모 순매수 전환 / 반도체·자동차 동반 랠리</div>
+    <div class="gauge-wrap">
+      <div style="position:relative; height:14px;">
+        <svg width="100%" height="10" style="border-radius:5px; display:block;">
+          <defs>
+            <linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1d4ed8"/>
+              <stop offset="18%" stop-color="#3b82f6"/>
+              <stop offset="35%" stop-color="#22c55e"/>
+              <stop offset="52%" stop-color="#eab308"/>
+              <stop offset="68%" stop-color="#f97316"/>
+              <stop offset="82%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#991b1b"/>
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="10" rx="5" ry="5" fill="url(#gg)"/>
+          <circle cx="82%" cy="5" r="8" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:6pt; color:var(--slate3); margin-top:4px; font-weight:500;"><span>극도의 공포</span><span>공포</span><span>중립</span><span>탐욕</span><span>극도의 탐욕</span></div>
+    </div>
+  </div>
+
+  <div class="idx-grid">
+    <div class="ix up"><div class="ix-n">KOSPI</div><div class="ix-v c-up">5,872</div><div class="ix-c c-up">▲ 377.56p <span class="ix-t t-up">+6.87%</span></div></div>
+    <div class="ix up"><div class="ix-n">KOSDAQ</div><div class="ix-v c-up">1,090</div><div class="ix-c c-up">▲ 53.12p <span class="ix-t t-up">+5.12%</span></div></div>
+    <div class="ix up"><div class="ix-n">거래대금</div><div class="ix-v">41.2조</div><div class="ix-c" style="font-size:7pt; color:var(--slate2);">전일(32.5조) 대비 +8.7조 폭증</div></div>
+    <div class="ix up"><div class="ix-n">5거래일 상승</div><div class="ix-v" style="font-size:10pt;">+20.5% 누적</div><div class="ix-c" style="font-size:7pt; color:var(--slate2);">4/2 저점(5,053) 대비 +16.2%</div></div>
+  </div>
+</div>
+
+<div class="nb">
+<div class="stit">💰 수급 · 환율 · 채권</div>
+<div class="g3 mb">
+  <div class="dcard">
+    <div class="dcard-t">📊 투자주체별 수급</div>
+    <div class="dr"><span class="dr-l">외국인 (KOSPI)</span><span class="dr-r c-up">+2조1,480억</span></div>
+    <div class="dr"><span class="dr-l">기관 (KOSPI)</span><span class="dr-r c-up">+1조3,920억</span></div>
+    <div class="dr"><span class="dr-l">개인 (KOSPI)</span><span class="dr-r c-dn">-3조5,210억</span></div>
+    <div class="dr"><span class="dr-l">외국인 전환</span><span class="dr-r c-up">13거래일 만에 매수</span></div>
+    <div class="dr"><span class="dr-l">외인 집중매수</span><span class="dr-r c-up">반도체 +1.3조</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">💱 환율 · 금리</div>
+    <div class="dr"><span class="dr-l">USD/KRW</span><span class="dr-r c-gn">1,479.03원</span></div>
+    <div class="dr"><span class="dr-l">원화 등락</span><span class="dr-r c-gn">-28.82원 급강세</span></div>
+    <div class="dr"><span class="dr-l">국고채 3년</span><span class="dr-r">3.42%</span></div>
+    <div class="dr"><span class="dr-l">국고채 10년</span><span class="dr-r">3.74%</span></div>
+    <div class="dr"><span class="dr-l">한국은행 기준금리</span><span class="dr-r">2.50%</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">🌏 글로벌 연동 (전일 마감)</div>
+    <div class="dr"><span class="dr-l">S&amp;P500</span><span class="dr-r c-up">6,617 (+0.08%)</span></div>
+    <div class="dr"><span class="dr-l">나스닥</span><span class="dr-r c-up">22,018 (+0.10%)</span></div>
+    <div class="dr"><span class="dr-l">WTI 원유</span><span class="dr-r c-dn">$95.78 (-15.20%)</span></div>
+    <div class="dr"><span class="dr-l">DXY 달러지수</span><span class="dr-r c-dn">98.78 (-0.87%)</span></div>
+    <div class="dr"><span class="dr-l">VIX / 미국10년</span><span class="dr-r">20.79 / 4.34%</span></div>
+  </div>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">🏢 업종별 등락 차트</div>
+<div class="sec-chart mb">
+  <div style="font-size:6.5pt; color:var(--slate3); margin-bottom:6px; text-align:center;">← 하락 (파랑) │ 상승 (빨강) →</div>
+  <div class="sec-r">
+    <span class="sec-nm">💻 반도체</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:100%"></div></div></div>
+    <span class="sec-v c-up">+10.8%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🚗 자동차</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:70%"></div></div></div>
+    <span class="sec-v c-up">+7.1%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🚢 조선</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:48%"></div></div></div>
+    <span class="sec-v c-up">+4.8%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🧬 바이오</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:46%"></div></div></div>
+    <span class="sec-v c-up">+4.6%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🔋 2차전지</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:32%"></div></div></div>
+    <span class="sec-v c-up">+3.2%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🎮 게임/엔터</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:30%"></div></div></div>
+    <span class="sec-v c-up">+3.0%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🏦 금융</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:28%"></div></div></div>
+    <span class="sec-v c-up">+2.8%</span>
+  </div>
+  <div class="sec-r">
+    <span class="sec-nm">🛡️ 방산</span>
+    <div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:22%"></div></div><div class="sec-bar-c right"></div></div>
+    <span class="sec-v c-dn">-2.2%</span>
+  </div>
+</div>
+</div>
+
+</div><!-- end page 1 -->
+
+<!-- PAGE 2 -->
+<div class="page page-break">
+
+<div class="nb">
+<div class="stit">🚀 시가총액 상위 종목 동향</div>
+<table class="tbl mb">
+  <thead><tr><th>종목</th><th>종가</th><th>등락률</th><th>등락폭</th><th>주요 원인</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tk">SK하이닉스</span><br><span class="co">000660</span></td><td>1,033,000원</td><td><span class="pct-pill up">+12.77%</span></td><td class="c-up">+117,000원</td><td class="nt">사상 최초 100만원 돌파, HBM4 수주 확대 + 외국인 1.3조 집중 매수</td></tr>
+    <tr><td><span class="tk">삼성전자</span><br><span class="co">005930</span></td><td>210,500원</td><td><span class="pct-pill up">+7.12%</span></td><td class="c-up">+14,000원</td><td class="nt">1Q 잠정실적 시장 컨센서스 상회, 반도체 부문 흑자 전환 기대</td></tr>
+    <tr><td><span class="tk">현대차</span><br><span class="co">005380</span></td><td>508,000원</td><td><span class="pct-pill up">+7.40%</span></td><td class="c-up">+35,000원</td><td class="nt">WTI $95 급락 · 원화강세 이중 수혜, 미국 3월 판매 호조</td></tr>
+    <tr><td><span class="tk">기아</span><br><span class="co">000270</span></td><td>159,200원</td><td><span class="pct-pill up">+5.57%</span></td><td class="c-up">+8,400원</td><td class="nt">유가·환율 동반 호재 + 하이브리드 판매 비중 확대</td></tr>
+    <tr><td><span class="tk">셀트리온</span><br><span class="co">068270</span></td><td>202,000원</td><td><span class="pct-pill up">+4.28%</span></td><td class="c-up">+8,300원</td><td class="nt">짐펜트라 미국 처방 확대 + 바이오 섹터 반등 동참</td></tr>
+    <tr><td><span class="tk">LG에너지솔루션</span><br><span class="co">373220</span></td><td>406,000원</td><td><span class="pct-pill dn">-0.61%</span></td><td class="c-dn">-2,500원</td><td class="nt">유가 급락으로 전기차 가격경쟁력 부담, 2차전지 상대 약세</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="nb">
+<div class="stit">⭐ 주목할 개별 종목</div>
+
+<div style="margin-bottom:4px;"><span class="tag g" style="font-size:7pt; padding:3px 8px;">🔥 급등 종목 — 반도체 · 자동차 · 유가 하락 수혜주</span></div>
+<table class="tbl" style="margin-bottom:8px;">
+  <thead><tr><th>종목</th><th>종가</th><th>등락률</th><th>급등 사유</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tk">SK하이닉스</span><br><span class="co">000660</span></td><td>1,033,000원</td><td><span class="pct-pill up">+12.77%</span></td><td class="nt">100만원 시대 개막, HBM4 엔비디아 공급 비중 확대 뉴스 + 외인 집중 매수</td></tr>
+    <tr><td><span class="tk">알테오젠</span><br><span class="co">196170</span></td><td>374,500원</td><td><span class="pct-pill up">+5.79%</span></td><td class="nt">MSD 키트루다 SC 제형 매출 가이던스 상향 + 코스닥 대형주 주도</td></tr>
+    <tr><td><span class="tk">한화오션</span><br><span class="co">042660</span></td><td>127,700원</td><td><span class="pct-pill up">+5.62%</span></td><td class="nt">LNG선 수주 모멘텀 지속, 조선 빅3 동반 상승</td></tr>
+    <tr><td><span class="tk">삼성중공업</span><br><span class="co">010140</span></td><td>28,300원</td><td><span class="pct-pill up">+5.60%</span></td><td class="nt">FLNG 수주 협상 진전 기대 + 업황 사이클 확장</td></tr>
+    <tr><td><span class="tk">포스코퓨처엠</span><br><span class="co">003670</span></td><td>217,500원</td><td><span class="pct-pill up">+4.07%</span></td><td class="nt">2차전지 낙폭과대 + 양극재 단가 바닥 인식 확산</td></tr>
+  </tbody>
+</table>
+
+<div style="margin-bottom:4px;"><span class="tag b" style="font-size:7pt; padding:3px 8px;">📉 상대적 약세 / 주의 종목</span></div>
+<table class="tbl" style="margin-bottom:10px;">
+  <thead><tr><th>종목</th><th>등락률</th><th>부진 사유</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tk">방산株 (LIG넥스원·한화에어로)</span></td><td><span class="pct-pill dn">-2~-4%</span></td><td class="nt">중동 종전 기대 + 유가 급락에 지정학 프리미엄 해소, 차익실현 출회</td></tr>
+    <tr><td><span class="tk">LG에너지솔루션</span> <span class="co">373220</span></td><td><span class="pct-pill dn">-0.61%</span></td><td class="nt">유가 하락 = EV 가격경쟁력 약화, 2차전지 대형주 상대 부진</td></tr>
+    <tr><td><span class="tk">정유·에너지株</span></td><td><span class="pct-pill dn">-3~-5%</span></td><td class="nt">WTI $95대 급락으로 정제마진·재고평가 손실 우려, SK이노·에쓰오일 약세</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="nb">
+<div class="stit">🌍 외국인 · 기관 수급 상세</div>
+<div class="flow-card mb">
+  <div class="flow-hdr">투자주체별 순매매 (KOSPI) — 2026.04.08</div>
+  <div class="flow-body">
+    <div class="flow-r"><span class="flow-sec">외국인 순매수</span><span class="flow-desc">13거래일 만의 대규모 전환 (반도체 집중)</span><span class="flow-val c-up">+2조1,480억</span></div>
+    <div class="flow-r"><span class="flow-sec">기관 순매수</span><span class="flow-desc">자동차·반도체 동반 매수</span><span class="flow-val c-up">+1조3,920억</span></div>
+    <div class="flow-r"><span class="flow-sec">개인 순매도</span><span class="flow-desc">단기 급등 차익실현 집중</span><span class="flow-val c-dn">-3조5,210억</span></div>
+    <div class="flow-r"><span class="flow-sec">핵심 포인트</span><span class="flow-desc">외인·기관 동시 매수 — 수급 구도 개선 시그널</span><span class="flow-val c-up">긍정</span></div>
+  </div>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">📰 매크로 · 주요 이슈</div>
+<div class="g2 mb">
+  <div class="dcard">
+    <div class="dcard-t">🇰🇷 국내 이슈</div>
+    <div class="dr"><span class="dr-l">KOSPI 5,872 — 사상 최고치 근접</span><span class="tag g">랠리</span></div>
+    <div class="dr"><span class="dr-l">SK하이닉스 100만원 시대 개막</span><span class="tag g">마일스톤</span></div>
+    <div class="dr"><span class="dr-l">삼성전자 1Q 잠정실적 컨센 상회</span><span class="tag g">호실적</span></div>
+    <div class="dr"><span class="dr-l">원/달러 1,479원 (1,500선 하향 안착)</span><span class="tag g">강세</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">🌍 글로벌 이슈</div>
+    <div class="dr"><span class="dr-l">WTI $95.78 (-15.20%) 중동 종전 기대</span><span class="tag g">유가 급락</span></div>
+    <div class="dr"><span class="dr-l">VIX 20.79 (-19%) 위험선호 복귀</span><span class="tag g">리스크온</span></div>
+    <div class="dr"><span class="dr-l">DXY 98.78 (-0.87%) 달러 약세</span><span class="tag g">신흥국 호재</span></div>
+    <div class="dr"><span class="dr-l">미 10년물 4.34% 안정</span><span class="tag b">중립</span></div>
+  </div>
+</div>
+</div>
+
+</div><!-- end page 2 -->
+
+<!-- PAGE 3 -->
+<div class="page page-break">
+
+<div class="nb">
+<div class="stit">🔍 분석 · 인사이트</div>
+
+<div class="g2" style="margin-bottom:6px;">
+  <div class="ins i-green" style="margin-bottom:0;">
+    <span class="ins-tag" style="background:var(--green-bg); color:var(--green);">시장 총평</span>
+    <h3>WTI -15% 급락 · 외인 전환 · 반도체 주도 → 풀 랠리</h3>
+    <p>전일 뉴욕장 WTI -15% 급락(중동 종전 기대 본격 반영)과 VIX 20선 회귀가 촉매. 원달러가 1,500선 아래로 내려가자 외국인이 13거래일 만에 +2.1조 대규모 순매수 전환, 반도체에 1.3조가 집중되며 SK하이닉스가 사상 최초 100만원을 돌파. 수출주(반도체·자동차) 전면 주도 랠리로, 4/1 기관 단독 반등과 달리 수급 구도가 질적으로 개선됨.</p>
+  </div>
+  <div class="ins i-green" style="margin-bottom:0;">
+    <span class="ins-tag" style="background:var(--green-bg); color:var(--green);">수급 분석</span>
+    <h3>외국인 귀환 — 추세 전환 유력 시그널</h3>
+    <p>외국인 +2.1조(13거래일 만의 대규모 순매수), 기관 +1.4조 동시 매수가 확인되며 3월 이후 지속된 외국인 매도 기조가 반전. 원화 강세(1,479원)·유가 급락·VIX 안정이 신흥국 리스크온 스위치를 작동시킨 교과서적 전환. 다만 개인이 3.5조 차익실현으로 물량을 받쳐주는 구조는 단기 피로도도 시사.</p>
+  </div>
+</div>
+
+<div class="g2" style="margin-bottom:6px;">
+  <div class="ins i-green" style="margin-bottom:0;">
+    <span class="ins-tag" style="background:var(--green-bg); color:var(--green);">💡 아이디어 ①</span>
+    <h3>반도체 대형주 — 외인 수급 기반 추세 연장</h3>
+    <p>SK하이닉스 100만원 돌파는 심리적 저항 해소 의미. 삼성전자(210,500원)도 21만원선 돌파로 기술적 상단 확장. HBM4·AI 수요 구조적 확인 + 외인 매수 재개 = 중기 상승 모멘텀. 단, 1주일 누적 +20% 과열, 10% 이상 갭 저항 시 분할 접근 권고.</p>
+  </div>
+  <div class="ins i-green" style="margin-bottom:0;">
+    <span class="ins-tag" style="background:var(--green-bg); color:var(--green);">💡 아이디어 ②</span>
+    <h3>자동차·조선 — 유가 하락 · 원화 강세 이중 수혜</h3>
+    <p>현대차 +7.40%, 기아 +5.57%, 조선3사(한화오션·삼성중공업) +5%대로 수출주 전반 동반 랠리. WTI $95 안착 시 자동차 OPM 개선 + 원자재 비용 완화. 조선은 LNG선·FLNG 수주 파이프라인 견조 — 유가 사이클과 무관한 중기 수주 테마로 분리 접근.</p>
+  </div>
+</div>
+
+<div class="ins i-red" style="margin-bottom:10px;">
+  <span class="ins-tag" style="background:var(--red-bg); color:var(--red);">🚨 리스크</span>
+  <h3>과열 경계 — 4가지 체크포인트</h3>
+  <p>
+    <b>①</b> 5거래일 누적 +20% 급등 — RSI 75 이상 기술적 과열, 단기 되돌림 가능 &nbsp;
+    <b>②</b> 방산·정유·LGES 섹터 로테이션 낙오 — 포트 편중 시 상대 부진 리스크 &nbsp;
+    <b>③</b> 유가 $95 급락의 지속성 불확실 — 중동 합의 불발 시 재상승 가능 &nbsp;
+    <b>④</b> 오늘밤 미 FOMC 의사록·CPI 발표 대기 — 금리 재부각 리스크
+  </p>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">⚔️ 내일 대응 전략</div>
+<div class="strat" style="margin-bottom:10px;">
+  <div class="strat-mode">📊 리스크온 유지 · 과열 대응 병행</div>
+  <ul class="strat-list">
+    <li><span class="bullet">1</span>반도체 대형주 기보유 포지션은 홀드 — SK하이닉스 100만원, 삼성전자 21만원 돌파는 추세 신호. 단기 조정 시 추격매수보다 분할 매수 전환.</li>
+    <li><span class="bullet">2</span>자동차(현대차·기아)는 원달러 1,480선 유지 한해 실적 상향 수혜 — 2분기 프리뷰 진입 전략 유효.</li>
+    <li><span class="bullet">3</span>방산·정유는 섹터 로테이션 낙오 — 저점 분할 매수보다는 반등 후 비중축소 관점으로 대응.</li>
+    <li><span class="bullet">4</span>오늘밤 미국 FOMC 의사록(04/09 03:00 KST) · 3월 CPI(04/10 21:30) 대기 — 지표 확인 전 현금 20% 유지.</li>
+    <li><span class="bullet">5</span>5거래일 +20% 급등 과열 — 갭업 출발 시 분할 익절, 갭다운은 지지선(5,700선) 확인 후 재진입 판단.</li>
+  </ul>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">📅 내일 주요 일정 (4/9)</div>
+<div class="sched mb">
+  <div class="dr"><span class="dr-l">🇺🇸 FOMC 3월 의사록 공개 (04/09 03:00 KST)</span><span class="tag r">최우선</span></div>
+  <div class="dr"><span class="dr-l">🇰🇷 4월 금통위 의사록 — 추가 인하 시그널 주목</span><span class="tag y">주목</span></div>
+  <div class="dr"><span class="dr-l">🇺🇸 주간 원유 재고 (EIA) — 유가 추가 하락 여부</span><span class="tag y">확인</span></div>
+  <div class="dr"><span class="dr-l">🌍 중동 종전 협상 — 합의 문서화 여부</span><span class="tag r">고위험</span></div>
+  <div class="dr"><span class="dr-l">🇰🇷 삼성SDI 등 2차전지 실적 프리뷰 시즌 시작</span><span class="tag b">모니터</span></div>
+</div>
+</div>
+
+<div class="summ nb" style="margin-bottom:10px;">
+  <div class="summ-hdr">📝 핵심 3줄 요약</div>
+  <div class="summ-body">
+    <div class="summ-item"><div class="summ-n">1</div><div class="summ-t">KOSPI +6.87%(5,872) · KOSDAQ +5.12%(1,090) 5거래일 연속 상승 마감. WTI -15% 급락 + 원달러 1,479원 강세 + VIX 20 복귀가 3중 촉매. 거래대금 41조 폭증.</div></div>
+    <div class="summ-item"><div class="summ-n">2</div><div class="summ-t">SK하이닉스 +12.77% 사상 최초 100만원 돌파(103.3만원), 삼성전자 +7.12%(210,500원), 현대차 +7.40%. 외국인 13거래일 만에 +2.1조 대규모 순매수 전환, 반도체에 1.3조 집중.</div></div>
+    <div class="summ-item"><div class="summ-n">3</div><div class="summ-t">외인 귀환으로 수급 질이 개선된 추세 랠리 성격이나 5거래일 +20% 과열은 경계 필요. FOMC 의사록·CPI 대기, 현금 20% 유지하며 반도체·자동차 수출주 중심 리스크온 유지.</div></div>
+  </div>
+</div>
+
+<div class="ftr">
+  <p>⚠️ 본 자료는 공개 정보를 기반으로 AI가 자동 생성한 투자 참고용 장 마감 브리핑입니다. 투자 권유·조언이 아니며 투자 판단의 최종 책임은 투자자 본인에게 있습니다.</p>
+  <p>생성: 2026.04.08 17:00 · 데이터 기준: 2026.04.08 국내 시장 종가 (Yahoo Finance, 웹검색 종합)</p>
+</div>
+
+</div><!-- end page 3 -->
+</body>
+</html>
