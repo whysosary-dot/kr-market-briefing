@@ -1,136 +1,140 @@
 {
-  "briefings": [
-    {
-      "date": "2026-05-14",
-      "file": "kr-market-closing-2026-05-14.html"
-    },
-    {
-      "date": "2026-05-13",
-      "file": "kr-market-closing-2026-05-13.html"
-    },
-    {
-      "date": "2026-05-12",
-      "file": "kr-market-closing-2026-05-12.html"
-    },
-    {
-      "date": "2026-05-11",
-      "file": "kr-market-closing-2026-05-11.html"
-    },
-    {
-      "date": "2026-05-08",
-      "file": "kr-market-closing-2026-05-08.html"
-    },
-    {
-      "date": "2026-05-07",
-      "file": "kr-market-closing-2026-05-07.html"
-    },
-    {
-      "date": "2026-05-06",
-      "file": "kr-market-closing-2026-05-06.html"
-    },
-    {
-      "date": "2026-05-05",
-      "file": "kr-market-closing-2026-05-05.html"
-    },
-    {
-      "date": "2026-05-04",
-      "file": "kr-market-closing-2026-05-04.html"
-    },
-    {
-      "date": "2026-05-01",
-      "file": "kr-market-closing-2026-05-01.html"
-    },
-    {
-      "date": "2026-04-30",
-      "file": "kr-market-closing-2026-04-30.html"
-    },
-    {
-      "date": "2026-04-29",
-      "file": "kr-market-closing-2026-04-29.html"
-    },
-    {
-      "date": "2026-04-28",
-      "file": "kr-market-closing-2026-04-28.html"
-    },
-    {
-      "date": "2026-04-27",
-      "file": "kr-market-closing-2026-04-27.html"
-    },
-    {
-      "date": "2026-04-24",
-      "file": "kr-market-closing-2026-04-24.html"
-    },
-    {
-      "date": "2026-04-23",
-      "file": "kr-market-closing-2026-04-23.html"
-    },
-    {
-      "date": "2026-04-22",
-      "file": "kr-market-closing-2026-04-22.html"
-    },
-    {
-      "date": "2026-04-21",
-      "file": "kr-market-closing-2026-04-21.html"
-    },
-    {
-      "date": "2026-04-20",
-      "file": "kr-market-closing-2026-04-20.html"
-    },
-    {
-      "date": "2026-04-17",
-      "file": "kr-market-closing-2026-04-17.html"
-    },
-    {
-      "date": "2026-04-16",
-      "file": "kr-market-closing-2026-04-16.html"
-    },
-    {
-      "date": "2026-04-15",
-      "file": "kr-market-closing-2026-04-15.html"
-    },
-    {
-      "date": "2026-04-14",
-      "file": "kr-market-closing-2026-04-14.html"
-    },
-    {
-      "date": "2026-04-13",
-      "file": "kr-market-closing-2026-04-13.html"
-    },
-    {
-      "date": "2026-04-10",
-      "file": "kr-market-closing-2026-04-10.html"
-    },
-    {
-      "date": "2026-04-09",
-      "file": "kr-market-closing-2026-04-09.html"
-    },
-    {
-      "date": "2026-04-08",
-      "file": "kr-market-closing-2026-04-08.html"
-    },
-    {
-      "date": "2026-04-07",
-      "file": "kr-market-closing-2026-04-07.html"
-    },
-    {
-      "date": "2026-04-06",
-      "file": "kr-market-closing-2026-04-06.html"
-    },
-    {
-      "date": "2026-04-03",
-      "file": "kr-market-closing-2026-04-03.html"
-    },
-    {
-      "date": "2026-04-02",
-      "file": "kr-market-closing-2026-04-02.html"
-    },
-    {
-      "date": "2026-04-01",
-      "file": "kr-market-closing-2026-04-01.html"
-    },
-    {
-      "date": "2026-03-31",
-      "file": "kr-market-closing-2026-03-31.html"
-    }
-  ]
+    "briefings": [
+        {
+            "date": "2026-05-15",
+            "file": "kr-market-closing-2026-05-15.html"
+        },
+        {
+            "date": "2026-05-14",
+            "file": "kr-market-closing-2026-05-14.html"
+        },
+        {
+            "date": "2026-05-13",
+            "file": "kr-market-closing-2026-05-13.html"
+        },
+        {
+            "date": "2026-05-12",
+            "file": "kr-market-closing-2026-05-12.html"
+        },
+        {
+            "date": "2026-05-11",
+            "file": "kr-market-closing-2026-05-11.html"
+        },
+        {
+            "date": "2026-05-08",
+            "file": "kr-market-closing-2026-05-08.html"
+        },
+        {
+            "date": "2026-05-07",
+            "file": "kr-market-closing-2026-05-07.html"
+        },
+        {
+            "date": "2026-05-06",
+            "file": "kr-market-closing-2026-05-06.html"
+        },
+        {
+            "date": "2026-05-05",
+            "file": "kr-market-closing-2026-05-05.html"
+        },
+        {
+            "date": "2026-05-04",
+            "file": "kr-market-closing-2026-05-04.html"
+        },
+        {
+            "date": "2026-05-01",
+            "file": "kr-market-closing-2026-05-01.html"
+        },
+        {
+            "date": "2026-04-30",
+            "file": "kr-market-closing-2026-04-30.html"
+        },
+        {
+            "date": "2026-04-29",
+            "file": "kr-market-closing-2026-04-29.html"
+        },
+        {
+            "date": "2026-04-28",
+            "file": "kr-market-closing-2026-04-28.html"
+        },
+        {
+            "date": "2026-04-27",
+            "file": "kr-market-closing-2026-04-27.html"
+        },
+        {
+            "date": "2026-04-24",
+            "file": "kr-market-closing-2026-04-24.html"
+        },
+        {
+            "date": "2026-04-23",
+            "file": "kr-market-closing-2026-04-23.html"
+        },
+        {
+            "date": "2026-04-22",
+            "file": "kr-market-closing-2026-04-22.html"
+        },
+        {
+            "date": "2026-04-21",
+            "file": "kr-market-closing-2026-04-21.html"
+        },
+        {
+            "date": "2026-04-20",
+            "file": "kr-market-closing-2026-04-20.html"
+        },
+        {
+            "date": "2026-04-17",
+            "file": "kr-market-closing-2026-04-17.html"
+        },
+        {
+            "date": "2026-04-16",
+            "file": "kr-market-closing-2026-04-16.html"
+        },
+        {
+            "date": "2026-04-15",
+            "file": "kr-market-closing-2026-04-15.html"
+        },
+        {
+            "date": "2026-04-14",
+            "file": "kr-market-closing-2026-04-14.html"
+        },
+        {
+            "date": "2026-04-13",
+            "file": "kr-market-closing-2026-04-13.html"
+        },
+        {
+            "date": "2026-04-10",
+            "file": "kr-market-closing-2026-04-10.html"
+        },
+        {
+            "date": "2026-04-09",
+            "file": "kr-market-closing-2026-04-09.html"
+        },
+        {
+            "date": "2026-04-08",
+            "file": "kr-market-closing-2026-04-08.html"
+        },
+        {
+            "date": "2026-04-07",
+            "file": "kr-market-closing-2026-04-07.html"
+        },
+        {
+            "date": "2026-04-06",
+            "file": "kr-market-closing-2026-04-06.html"
+        },
+        {
+            "date": "2026-04-03",
+            "file": "kr-market-closing-2026-04-03.html"
+        },
+        {
+            "date": "2026-04-02",
+            "file": "kr-market-closing-2026-04-02.html"
+        },
+        {
+            "date": "2026-04-01",
+            "file": "kr-market-closing-2026-04-01.html"
+        },
+        {
+            "date": "2026-03-31",
+            "file": "kr-market-closing-2026-03-31.html"
+        }
+    ]
 }
