@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>국내 시장 장 마감 브리핑 | 2026.06.03</title>
+<style>
+  @page { size: A4 portrait; margin: 2mm 2.4mm; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  :root { --red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#2563eb;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--amber:#d97706;--amber-bg:#fffbeb;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#ffffff;--ink:#0f172a; }
+  * { box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important; }
+  body { font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:13.5pt;line-height:1.5; }
+  .page { width:100%;max-width:100%;margin:0 auto; }
+  .page-break { page-break-before:always; }
+  .nb { page-break-inside:avoid;break-inside:avoid; }
+  @media screen { body{background:#e2e8f0;padding:0;margin:0;} .page{background:#fff;padding:4px 6px;box-shadow:0 4px 20px rgba(0,0,0,0.12);border-radius:6px;margin-bottom:4px;width:100%;max-width:100%;} }
+  @media print { .page{width:100%;max-width:100%;padding:0;} }
+  .hdr { background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%) !important;border-radius:8px;padding:14px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;color:#fff; }
+  .hdr h1 { font-size:22.5pt;font-weight:900;letter-spacing:-0.8px; }
+  .hdr .sub { font-size:11.25pt;color:#94a3b8;margin-top:2px;font-weight:400; }
+  .hdr .dt { background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.15);padding:5px 14px;border-radius:20px;font-size:12pt;font-weight:700; }
+  .hero { background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%) !important;border:1.5px solid #93c5fd;border-radius:8px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px; }
+  .hero.green { background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%) !important;border-color:#86efac; }
+  .hero.amber { background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%) !important;border-color:#fcd34d; }
+  .hero.red { background:linear-gradient(135deg,#fef2f2 0%,#fff1f2 100%) !important;border-color:#fca5a5; }
+  .hero.slate { background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%) !important;border-color:#94a3b8; }
+  .hero-icon { width:36px;height:36px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#fff; }
+  .hero.green .hero-icon { background:var(--green); }
+  .hero.amber .hero-icon { background:var(--amber); }
+  .hero.red .hero-icon { background:var(--red); }
+  .hero.slate .hero-icon { background:var(--slate); }
+  .hero-text { font-size:12.75pt;color:#1e3a8a;line-height:1.6; }
+  .hero.green .hero-text { color:#166534; }
+  .hero.amber .hero-text { color:#92400e; }
+  .hero.red .hero-text { color:#991b1b; }
+  .hero.slate .hero-text { color:#0f172a; }
+  .hero-text b { color:var(--blue); }
+  .hero.green .hero-text b { color:var(--green); }
+  .hero.amber .hero-text b { color:var(--amber); }
+  .hero.red .hero-text b { color:var(--red); }
+  .hero.slate .hero-text b { color:var(--slate); }
+  .kpi-row { display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:12px; }
+  .kpi { text-align:center;padding:8px 4px;border-radius:6px;border:1px solid var(--slate5); }
+  .kpi.neg { background:var(--blue-bg);border-color:var(--blue-light); }
+  .kpi.pos { background:var(--red-bg);border-color:var(--red-light); }
+  .kpi.neu { background:var(--slate6); }
+  .kpi-lb { font-size:9.75pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.5px; }
+  .kpi-v { font-size:19.5pt;font-weight:900;margin-top:2px; }
+  .top2 { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px; }
+  .sent { border:1px solid var(--slate5);border-radius:8px;padding:12px 14px;background:var(--white); }
+  .sent-hdr { display:flex;align-items:center;gap:8px;margin-bottom:10px; }
+  .sent-badge { font-size:16.5pt;font-weight:900;color:var(--slate);background:var(--slate6);border:1px solid var(--slate5);padding:4px 12px;border-radius:16px; }
+  .sent-mode { font-size:11.25pt;font-weight:700;color:var(--slate);background:var(--slate6);border:1px solid var(--slate5);padding:3px 10px;border-radius:12px; }
+  .gauge-wrap { margin-top:6px; }
+  .idx-grid { display:grid;grid-template-columns:1fr 1fr;gap:6px; }
+  .ix { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px;position:relative;overflow:hidden; }
+  .ix::after { content:'';position:absolute;top:0;left:0;right:0;height:3px; }
+  .ix.dn::after { background:var(--blue); }
+  .ix.up::after { background:var(--red); }
+  .ix.neu::after { background:var(--slate3); }
+  .ix-n { font-size:9.75pt;color:var(--slate3);font-weight:700;text-transform:uppercase;letter-spacing:0.4px; }
+  .ix-v { font-size:21pt;font-weight:900;margin:1px 0; }
+  .ix-c { font-size:12pt;font-weight:700; }
+  .ix-t { font-size:9.75pt;display:inline-block;padding:1px 5px;border-radius:3px;font-weight:700;margin-top:2px; }
+  .t-dn { background:var(--blue-bg);color:var(--blue); }
+  .t-up { background:var(--red-bg);color:var(--red); }
+  .t-warn { background:var(--amber-bg);color:var(--amber); }
+  .t-neu { background:var(--slate6);color:var(--slate); }
+  .stit { font-size:15pt;font-weight:900;color:var(--ink);margin-bottom:6px;padding-bottom:4px;border-bottom:2.5px solid var(--ink);display:flex;align-items:center;gap:6px; }
+  .g3 { display:grid;grid-template-columns:repeat(3,1fr);gap:8px; }
+  .g2 { display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+  .mb { margin-bottom:10px; }
+  .dcard { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px;background:var(--white); }
+  .dcard-t { font-size:10.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.3px;margin-bottom:5px; }
+  .dr { display:flex;justify-content:space-between;align-items:center;padding:3px 0; }
+  .dr + .dr { border-top:1px solid var(--slate6); }
+  .dr-l { font-size:11.25pt;color:var(--slate2); }
+  .dr-r { font-size:11.25pt;font-weight:700; }
+  .sec-chart { border:1px solid var(--slate5);border-radius:6px;padding:10px 12px; }
+  .sec-r { display:flex;align-items:center;gap:6px;padding:4px 0; }
+  .sec-r + .sec-r { border-top:1px solid var(--slate6); }
+  .sec-nm { flex:0 0 80px;font-size:11.25pt;color:var(--slate2);font-weight:500; }
+  .sec-vis { flex:1;display:flex;align-items:center;height:16px;position:relative; }
+  .sec-vis .mid { position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--slate4); }
+  .sec-bar-c { width:50%;display:flex;align-items:center;height:100%; }
+  .sec-bar-c.left { justify-content:flex-end; }
+  .sec-bar-c.right { justify-content:flex-start; }
+  .sb { height:12px;border-radius:2px;min-width:2px;transition:width 0.3s; }
+  .sb.up { background:linear-gradient(90deg,#fca5a5,var(--red)) !important;border-radius:2px 0 0 2px; }
+  .sb.dn { background:linear-gradient(90deg,var(--blue),#93c5fd) !important;border-radius:0 2px 2px 0; }
+  .sec-v { flex:0 0 42px;text-align:right;font-size:12pt;font-weight:800; }
+  .tbl { width:100%;border-collapse:collapse;border:1px solid var(--slate5);border-radius:6px;overflow:hidden; }
+  .tbl th { font-size:9.75pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.4px;padding:6px 8px;text-align:left;background:var(--slate6);border-bottom:1.5px solid var(--slate5); }
+  .tbl td { padding:5px 8px;font-size:12pt;border-bottom:1px solid var(--slate6); }
+  .tbl tr:last-child td { border-bottom:none; }
+  .tbl tr:nth-child(even) td { background:#fafbfc; }
+  .tk { font-weight:900;font-size:13.5pt;letter-spacing:0.3px; }
+  .co { color:var(--slate3);font-size:9.75pt;font-weight:500; }
+  .nt { color:var(--slate2);font-size:10.5pt;line-height:1.5; }
+  .pct-pill { display:inline-block;padding:2px 7px;border-radius:4px;font-weight:800;font-size:12.75pt; }
+  .pct-pill.dn { background:var(--blue-bg);color:var(--blue); }
+  .pct-pill.up { background:var(--red-bg);color:var(--red); }
+  .pct-pill.neu { background:var(--slate6);color:var(--slate); }
+  .ins { border-radius:6px;padding:10px 12px;margin-bottom:6px;border:1px solid var(--slate5);position:relative;overflow:hidden; }
+  .ins::before { content:'';position:absolute;left:0;top:0;bottom:0;width:4px; }
+  .ins.i-blue::before { background:var(--blue); }
+  .ins.i-red::before { background:var(--red); }
+  .ins.i-green::before { background:var(--green); }
+  .ins.i-amber::before { background:var(--amber); }
+  .ins.i-slate::before { background:var(--slate); }
+  .ins-tag { display:inline-block;font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:2px 7px;border-radius:3px;margin-bottom:4px; }
+  .ins h3 { font-size:13.5pt;font-weight:800;margin-bottom:3px;line-height:1.4; }
+  .ins p { font-size:11.25pt;color:var(--slate2);line-height:1.65; }
+  .strat { border:2px solid var(--amber);border-radius:8px;padding:12px 14px;background:linear-gradient(135deg,var(--amber-bg) 0%,#fff 100%) !important; }
+  .strat-mode { display:inline-block;background:var(--amber);color:#fff;padding:5px 16px;border-radius:6px;font-size:16.5pt;font-weight:900;margin-bottom:10px;letter-spacing:-0.3px; }
+  .strat-list { list-style:none; }
+  .strat-list li { padding:4px 0;font-size:12pt;color:var(--slate2);display:flex;gap:6px;align-items:flex-start; }
+  .strat-list li + li { border-top:1px solid #fde68a; }
+  .strat-list .bullet { display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--amber);color:#fff;font-size:9.75pt;font-weight:800;flex-shrink:0;margin-top:1px; }
+  .summ { border:2px solid var(--amber);border-radius:8px;overflow:hidden; }
+  .summ-hdr { background:var(--amber);color:#fff;padding:6px 14px;font-size:13.5pt;font-weight:800; }
+  .summ-body { padding:10px 14px;background:var(--amber-bg); }
+  .summ-item { display:flex;gap:10px;padding:6px 0;align-items:flex-start; }
+  .summ-item + .summ-item { border-top:1px solid #fde68a; }
+  .summ-n { width:24px;height:24px;border-radius:50%;background:var(--amber);color:#fff;font-size:15pt;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+  .summ-t { font-size:12.75pt;font-weight:600;line-height:1.65;color:var(--ink); }
+  .sched { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px; }
+  .sched .dr-l { font-size:12pt; }
+  .tag { display:inline-block;font-size:9pt;font-weight:700;padding:2px 6px;border-radius:8px; }
+  .tag.r { background:var(--red-bg);color:var(--red);border:1px solid var(--red-light); }
+  .tag.b { background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-light); }
+  .tag.y { background:var(--amber-bg);color:var(--amber);border:1px solid #fde68a; }
+  .tag.g { background:var(--green-bg);color:var(--green);border:1px solid #bbf7d0; }
+  .tag.s { background:var(--slate6);color:var(--slate);border:1px solid var(--slate5); }
+  .flow-card { border:1px solid var(--slate5);border-radius:6px;overflow:hidden; }
+  .flow-card .flow-hdr { background:var(--slate6);padding:5px 10px;font-size:10.5pt;font-weight:700;color:var(--slate2);text-transform:uppercase; }
+  .flow-card .flow-body { padding:6px 10px; }
+  .flow-r { display:grid;grid-template-columns:70px 1fr auto;gap:6px;align-items:center;padding:4px 0; }
+  .flow-r + .flow-r { border-top:1px solid var(--slate6); }
+  .flow-sec { font-size:12pt;font-weight:800;color:var(--ink); }
+  .flow-desc { font-size:10.5pt;color:var(--slate2); }
+  .flow-val { font-size:11.25pt;font-weight:800;text-align:right; }
+  .ftr { text-align:center;padding:10px 0;margin-top:8px;border-top:1.5px solid var(--slate5); }
+  .ftr p { font-size:9.75pt;color:var(--slate3);line-height:1.7; }
+  .c-up { color:var(--red); } .c-dn { color:var(--blue); }
+  .c-gn { color:var(--green); } .c-am { color:var(--amber); } .c-sl { color:var(--slate); }
+  .closed-banner { background:linear-gradient(135deg,#1e293b 0%,#334155 100%) !important;border-radius:8px;padding:14px 18px;margin-bottom:12px;color:#fff;text-align:center; }
+  .closed-banner .ttl { font-size:21pt;font-weight:900;letter-spacing:-0.5px;margin-bottom:4px; }
+  .closed-banner .sub { font-size:12pt;color:#cbd5e1;font-weight:500; }
+
+  /* ===== 태블릿/데스크탑 (≥768px) — 화면 폭 100% 유지 ===== */
+  @media screen and (min-width: 768px) {
+    body { padding: 0 !important; margin: 0 !important; }
+    .page { width: 100% !important; max-width: 100% !important; padding: 6px 8px !important; border-radius: 8px; margin-left:0 !important; margin-right:0 !important; }
+  }
+
+  /* ===== 모바일 반응형 (max-width: 767px) ===== */
+  @media screen and (max-width: 767px) {
+    body { font-size: 19.5px; line-height: 1.55; padding: 0 !important; margin: 0 !important; background: #f1f5f9; }
+    .page { width: 100% !important; max-width: 100% !important; padding: 4px 4px !important; margin: 0 0 2px 0 !important; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .page-break { page-break-before: auto; }
+
+    .hdr { padding: 12px 14px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .hdr h1 { font-size: 25.5px; line-height: 1.3; }
+    .hdr .sub { font-size: 16.5px; line-height: 1.5; }
+    .hdr .dt { font-size: 16.5px; padding: 4px 12px; align-self: flex-start; }
+
+    .closed-banner .ttl { font-size: 24px; }
+    .closed-banner .sub { font-size: 16.5px; }
+
+    .hero { flex-direction: row; align-items: flex-start; padding: 12px 14px; gap: 10px; }
+    .hero-icon { width: 32px; height: 32px; font-size: 24px; }
+    .hero-text { font-size: 18.75px; line-height: 1.65; }
+
+    .kpi-row { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .kpi { padding: 8px 4px; }
+    .kpi-lb { font-size: 13.5px; }
+    .kpi-v { font-size: 22.5px; }
+
+    .top2 { grid-template-columns: 1fr; gap: 10px; }
+    .g3 { grid-template-columns: 1fr; gap: 8px; }
+    .g2 { grid-template-columns: 1fr; gap: 8px; }
+
+    .idx-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .ix { padding: 8px 10px; }
+    .ix-n { font-size: 13.5px; }
+    .ix-v { font-size: 24px; }
+    .ix-c { font-size: 16.5px; }
+    .ix-t { font-size: 13.5px; }
+
+    .sent { padding: 12px 14px; }
+    .sent-badge { font-size: 19.5px; }
+    .sent-mode { font-size: 15px; }
+
+    .dcard { padding: 10px 12px; }
+    .dcard-t { font-size: 15px; }
+    .dr { padding: 4px 0; }
+    .dr-l, .dr-r { font-size: 16.5px; }
+
+    .stit { font-size: 19.5px; padding-bottom: 5px; margin-bottom: 8px; }
+
+    .sec-chart { padding: 10px 10px; }
+    .sec-nm { flex: 0 0 88px; font-size: 15px; }
+    .sec-v { flex: 0 0 50px; font-size: 16.5px; }
+
+    .tbl { font-size: 16.5px; }
+    .tbl th { font-size: 13.5px; padding: 6px 6px; }
+    .tbl td { padding: 6px 6px; font-size: 16.5px; }
+    .tk { font-size: 18px; }
+    .co { font-size: 13.5px; }
+    .nt { font-size: 15.75px; line-height: 1.55; }
+    .pct-pill { font-size: 16.5px; padding: 2px 6px; }
+
+    .ins { padding: 12px 14px; margin-bottom: 8px; }
+    .ins h3 { font-size: 19.5px; line-height: 1.45; }
+    .ins p { font-size: 17.25px; line-height: 1.7; }
+    .ins-tag { font-size: 13.5px; }
+
+    .flow-card .flow-hdr { font-size: 15px; padding: 6px 10px; line-height: 1.5; }
+    .flow-r { grid-template-columns: 90px 1fr auto; row-gap: 4px; }
+    .flow-sec { font-size: 16.5px; }
+    .flow-desc { font-size: 15.75px; line-height: 1.6; }
+    .flow-val { font-size: 16.5px; }
+
+    .strat { padding: 12px 14px; }
+    .strat-mode { font-size: 19.5px; padding: 6px 14px; }
+    .strat-list li { font-size: 17.25px; padding: 6px 0; line-height: 1.7; }
+    .strat-list .bullet { width: 18px; height: 18px; font-size: 13.5px; }
+
+    .sched .dr-l { font-size: 16.5px; line-height: 1.6; }
+    .sched .dr-r { font-size: 15.75px; }
+    .tag { font-size: 13.5px; }
+
+    .summ-hdr { font-size: 18px; padding: 7px 14px; }
+    .summ-body { padding: 10px 12px; }
+    .summ-t { font-size: 18px; line-height: 1.7; }
+    .summ-n { width: 22px; height: 22px; font-size: 18px; }
+
+    .ftr p { font-size: 14.25px; line-height: 1.65; }
+  }
+
+  /* ===== 매우 좁은 화면 (max-width: 420px) ===== */
+  @media screen and (max-width: 420px) {
+    .page { padding: 3px 3px !important; margin: 0 !important; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .idx-grid { grid-template-columns: 1fr; }
+    .ix-v { font-size: 27px; }
+    .hero-text { font-size: 18px; }
+    .tbl th { font-size: 12.75px; padding: 5px 4px; }
+    .tbl td { padding: 5px 4px; font-size: 15.75px; }
+    .tk { font-size: 16.5px; }
+    .nt { font-size: 15px; }
+    .pct-pill { font-size: 15.75px; padding: 2px 5px; }
+    .flow-r { grid-template-columns: 70px 1fr auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+<div class="hdr nb">
+  <div>
+    <h1>🇰🇷 국내 시장 장 마감 브리핑</h1>
+    <div class="sub">6/3(수) — 제9회 전국동시지방선거 임시공휴일 휴장 · 글로벌 야간 모멘텀 점검 + 6/4 재개장 프리뷰 · 출처: KRX·네이버금융·CNBC·Yahoo Finance·yfinance·한국은행·중앙선관위</div>
+  </div>
+  <div class="dt">2026. 6. 3 (수)</div>
+</div>
+
+<div class="closed-banner nb">
+  <div class="ttl">🗳️ KRX 휴장 — 제9회 전국동시지방선거 임시공휴일</div>
+  <div class="sub">KOSPI · KOSDAQ · KRX 파생·일반상품 시장 모두 휴장 / 다음 거래일 2026.6.4 (목)</div>
+</div>
+
+<div class="hero slate nb">
+  <div class="hero-icon">🗳️</div>
+  <div class="hero-text">
+    <b>🗳️ KRX 전 시장 휴장 — 6/3 임시공휴일 지방선거 · 다음 거래일 6/4(목) 재개장 · 美 6/2 종가 신고가 행진 연장이 야간 모멘텀 진원지.</b>
+    <b>美 S&P500·다우 신고가 추가 갱신·Marvell 사상급 폭등·NVDA Computex Taipei 모멘텀 — 반도체·AI 인프라 광역 강세 시그널이 6/4 KOSPI 재개장 진원지로 작용 예상.</b>
+    <b>USD/KRW NDF 추가 약세 전환 + 환율 1,520원 위협 가속 vs 美 10년물 안정 + VIX 안정세 — 환율 변수와 6/3 지방선거 결과가 6/4 빅캡 분산 회복 분기점.</b>
+  </div>
+</div>
+
+<div class="kpi-row nb">
+  <div class="kpi neu"><div class="kpi-lb">KOSPI</div><div class="kpi-v c-sl">휴장</div></div>
+  <div class="kpi neu"><div class="kpi-lb">KOSDAQ</div><div class="kpi-v c-sl">휴장</div></div>
+  <div class="kpi pos"><div class="kpi-lb">S&P500(6/2)</div><div class="kpi-v c-up">+0.13%</div></div>
+  <div class="kpi pos"><div class="kpi-lb">NIKKEI(6/3)</div><div class="kpi-v c-up">+2.94%</div></div>
+  <div class="kpi neg"><div class="kpi-lb">USD/KRW</div><div class="kpi-v c-dn">1,527</div></div>
+  <div class="kpi pos"><div class="kpi-lb">MRVL(6/2)</div><div class="kpi-v c-up">+32.5%</div></div>
+</div>
+
+<div class="top2 nb mb">
+  <div class="sent">
+    <div class="sent-hdr">
+      <span class="sent-badge">🗳️ KRX 휴장</span>
+      <span class="sent-mode">지방선거 임시공휴일 · 6/4 재개장 · 美 신고가 + AI 폭등 야간 모멘텀</span>
+    </div>
+    <div style="font-size:7.5pt;color:var(--slate2);margin-bottom:8px;">제9회 전국동시지방선거 / KRX 전 시장 휴장 / 美 신고가 행진 / Marvell 사상급 폭등 / NVDA Computex Taipei / 환율 1,520원 위협 / 6/4 KOSPI 재개장</div>
+    <div class="gauge-wrap">
+      <div style="position:relative;height:14px;">
+        <svg width="100%" height="10" style="border-radius:5px;display:block;">
+          <defs><linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="18%" stop-color="#3b82f6"/><stop offset="35%" stop-color="#22c55e"/><stop offset="52%" stop-color="#eab308"/><stop offset="68%" stop-color="#f97316"/><stop offset="82%" stop-color="#ef4444"/><stop offset="100%" stop-color="#991b1b"/></linearGradient></defs>
+          <rect width="100%" height="10" rx="5" ry="5" fill="url(#gg)"/>
+          <circle cx="62%" cy="5" r="8" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:6pt;color:var(--slate3);margin-top:4px;font-weight:500;"><span>극도의 공포</span><span>공포</span><span>중립</span><span>탐욕</span><span>극도의 탐욕</span></div>
+    </div>
+  </div>
+
+  <div class="idx-grid">
+    <div class="ix neu"><div class="ix-n">KOSPI (6/2 종가)</div><div class="ix-v c-sl">8,801.49</div><div class="ix-c c-sl">휴장 <span class="ix-t t-neu">— · 직전 종가 신고가</span></div></div>
+    <div class="ix neu"><div class="ix-n">KOSDAQ (6/2 종가)</div><div class="ix-v c-sl">1,026.03</div><div class="ix-c c-sl">휴장 <span class="ix-t t-neu">— · 직전 6일째 약세</span></div></div>
+    <div class="ix dn"><div class="ix-n">USD/KRW (NDF)</div><div class="ix-v c-dn">1,527.34</div><div class="ix-c c-dn" style="font-size:7pt;">▲ 9.39원 (+0.67%) · 원화 추가 약세</div></div>
+    <div class="ix up"><div class="ix-n">NIKKEI225 (6/3)</div><div class="ix-v c-up">강세</div><div class="ix-c c-up" style="font-size:7pt;">▲ +2.94% · 사상 신고가 갱신</div></div>
+  </div>
+</div>
+
+<div class="nb">
+<div class="stit">🌏 글로벌 야간 모멘텀 (美 신고가 행진 + Marvell 사상급 폭등 + 아시아 분기 · 한국 휴장)</div>
+<div class="g3 mb">
+  <div class="dcard">
+    <div class="dcard-t">📈 美 증시 6/2 화 종가 (신고가 행진)</div>
+    <div class="dr"><span class="dr-l">S&P500</span><span class="dr-r c-up">7,609.78 (+0.13%) 신고가</span></div>
+    <div class="dr"><span class="dr-l">NASDAQ</span><span class="dr-r c-up">27,093.90 (+0.03%)</span></div>
+    <div class="dr"><span class="dr-l">DJI</span><span class="dr-r c-up">51,307.79 (+0.45%) 신고가</span></div>
+    <div class="dr"><span class="dr-l">VIX</span><span class="dr-r c-gn">16.10 (안정세)</span></div>
+    <div class="dr"><span class="dr-l">트리거</span><span class="dr-r">NVDA Computex + Marvell 사상급</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">🌏 아시아 6/3 (한국 단독 휴장)</div>
+    <div class="dr"><span class="dr-l">NIKKEI225</span><span class="dr-r c-up">+2.94% 사상 신고가</span></div>
+    <div class="dr"><span class="dr-l">TOPIX</span><span class="dr-r c-up">+2.14% 강세</span></div>
+    <div class="dr"><span class="dr-l">CSI300</span><span class="dr-r c-up">+1.52% 강세</span></div>
+    <div class="dr"><span class="dr-l">HSI</span><span class="dr-r c-dn">-1.73% 차익실현</span></div>
+    <div class="dr"><span class="dr-l">KOSPI/KOSDAQ</span><span class="dr-r c-sl">🗳️ 지방선거 휴장</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">💵 환율·채권·원자재 (환율 1,520원 위협)</div>
+    <div class="dr"><span class="dr-l">USD/KRW (NDF)</span><span class="dr-r c-dn">1,527.34 (+0.67%)</span></div>
+    <div class="dr"><span class="dr-l">DXY</span><span class="dr-r c-am">99 안정</span></div>
+    <div class="dr"><span class="dr-l">美 10Y</span><span class="dr-r c-gn">4.43% (-4.3bp 안정)</span></div>
+    <div class="dr"><span class="dr-l">WTI (6/2 종가)</span><span class="dr-r c-dn">91.19 (-1.05%)</span></div>
+    <div class="dr"><span class="dr-l">금 / DXY</span><span class="dr-r c-am">4,567 / 99 강세</span></div>
+  </div>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">📊 美 6/2 섹터 모멘텀 — 6/4 KOSPI 재개장 진원지 후보 (반도체·AI 인프라 광역 폭등)</div>
+<div class="sec-chart mb">
+  <div class="sec-r"><div class="sec-nm">Marvell (AI 인프라)</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:95%"></div></div></div><div class="sec-v c-up">+32.5%</div></div>
+  <div class="sec-r"><div class="sec-nm">HPE (서버)</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:78%"></div></div></div><div class="sec-v c-up">+19.0%</div></div>
+  <div class="sec-r"><div class="sec-nm">반도체 광역</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:42%"></div></div></div><div class="sec-v c-up">강세</div></div>
+  <div class="sec-r"><div class="sec-nm">AI 데이터센터</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:38%"></div></div></div><div class="sec-v c-up">강세</div></div>
+  <div class="sec-r"><div class="sec-nm">방산·항공</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:22%"></div></div></div><div class="sec-v c-up">강세 연장</div></div>
+  <div class="sec-r"><div class="sec-nm">전력기기·중전기</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:20%"></div></div></div><div class="sec-v c-up">강세 연장</div></div>
+  <div class="sec-r"><div class="sec-nm">금융·은행</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:8%"></div></div></div><div class="sec-v c-up">보합</div></div>
+  <div class="sec-r"><div class="sec-nm">에너지·정유</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:14%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">약세</div></div>
+  <div class="sec-r"><div class="sec-nm">2차전지·화학</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:6%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">보합</div></div>
+  <div class="sec-r"><div class="sec-nm">HSI (홍콩)</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:18%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">차익실현</div></div>
+</div>
+</div>
+
+<div class="ftr">
+  <p>📊 작성: 2026.06.03 수요일 17:00 KST · 데이터 소스: 한국거래소·CNBC·Yahoo Finance·yfinance·중앙선관위·한국은행 (KRX 휴장으로 정규장 데이터 없음)</p>
+  <p>본 자료는 정보 제공 목적이며, 투자 권유나 종목 추천이 아닙니다. 투자 판단의 책임은 투자자 본인에게 있습니다.</p>
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page page-break">
+
+<div class="stit nb">🌃 美 6/2 화 종목 하이라이트 — 6/4 KOSPI 재개장 영향 후보 (반도체·AI 인프라 광역 폭등)</div>
+
+<table class="tbl mb nb">
+  <thead><tr><th style="width:24%">종목</th><th style="width:13%">6/2 종가($)</th><th style="width:12%">등락률</th><th>핵심 (KOSPI 재개장 영향)</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tk">Marvell Technology</span><br><span class="co">MRVL · AI 인프라·NVLink</span></td><td>—</td><td><span class="pct-pill up">+32.5%</span></td><td class="nt">Jensen Huang Computex Taipei 「차세대 트릴리언달러 기업」 발언 — 사상급 단일일 폭등, 한미반도체·LX세미콘 등 후방 광역 강세 진원지 후보.</td></tr>
+    <tr><td><span class="tk">Hewlett Packard Enterprise</span><br><span class="co">HPE · AI 서버</span></td><td>—</td><td><span class="pct-pill up">+19.0%</span></td><td class="nt">실적 강세 + AI 서버 수요 가속 — 삼성전기·LG이노텍 MLCC·서버 후방 강세 모멘텀 연장 후보.</td></tr>
+    <tr><td><span class="tk">NVIDIA</span><br><span class="co">NVDA · GPU·AI 인프라</span></td><td>—</td><td><span class="pct-pill up">강세</span></td><td class="nt">Computex Taipei 키노트 + NVLink Fusion·Marvell 협력 강조 — SK하이닉스·삼성전자 HBM 사이클 연장 모멘텀 진원지.</td></tr>
+    <tr><td><span class="tk">S&P500</span><br><span class="co">SPX · 美 대표지수</span></td><td>7,609.78</td><td><span class="pct-pill up">+0.13%</span></td><td class="nt">7,600선 첫 안착 + 신고가 추가 갱신 — 美 대형주 강세 사이클 진원지, KOSPI 재개장 6/4 모멘텀 견인 후보.</td></tr>
+    <tr><td><span class="tk">DJI (Dow Jones)</span><br><span class="co">DJI · 美 대형주</span></td><td>51,307.79</td><td><span class="pct-pill up">+0.45%</span></td><td class="nt">신고가 추가 갱신 — 美 대형주 광역 강세 연장 시그널, 빅캡 회복 모멘텀 진원지.</td></tr>
+    <tr><td><span class="tk">NASDAQ</span><br><span class="co">IXIC · 美 기술주</span></td><td>27,093.90</td><td><span class="pct-pill up">+0.03%</span></td><td class="nt">고점 부근 보합 — 기술주 단기 차익 광역 출회 후 강세 사이클 유지, 단기 변동성 누적 신호.</td></tr>
+    <tr><td><span class="tk">NIKKEI225 (6/3)</span><br><span class="co">N225 · 일본</span></td><td>강세</td><td><span class="pct-pill up">+2.94%</span></td><td class="nt">사상 신고가 갱신 — 美 AI 모멘텀 동조 + 엔화 약세 강세, 한국 휴장 갭 메우기 모멘텀 후보.</td></tr>
+    <tr><td><span class="tk">USD/KRW (NDF)</span><br><span class="co">FX · 환율 약세</span></td><td>1,527.34</td><td><span class="pct-pill dn">+0.67%</span></td><td class="nt">원화 추가 약세 — 1,520원 위협 가속, 美 신고가 + 강달러 + 한국 매파 사이클 동조, 6/4 KOSPI 환율 부담 누적.</td></tr>
+    <tr><td><span class="tk">WTI (6/2 종가)</span><br><span class="co">CL · 원유</span></td><td>91.19</td><td><span class="pct-pill dn">-1.05%</span></td><td class="nt">중동 정세 안정 + 휴전 모드 안정 — 정유 약세 + 유가 부담 일부 완화, 항공·운송 모멘텀 분기 신호.</td></tr>
+    <tr><td><span class="tk">VIX</span><br><span class="co">VIX · 변동성</span></td><td>16.10</td><td><span class="pct-pill neu">안정</span></td><td class="nt">변동성 안정세 지속 — 美 신고가 행진에도 변동성 압축 모드, 글로벌 리스크 톤 보합 시그널.</td></tr>
+    <tr><td><span class="tk">美 10Y Yield</span><br><span class="co">UST10 · 금리</span></td><td>4.43%</td><td><span class="pct-pill up">-4.3bp</span></td><td class="nt">국채금리 소폭 안정 — Fed 경기 시그널 점검 단계, 한은 동결 장기화 시그널과 동조.</td></tr>
+    <tr><td><span class="tk">CSI300 (6/3)</span><br><span class="co">중국 본토</span></td><td>강세</td><td><span class="pct-pill up">+1.52%</span></td><td class="nt">중국 본토 강세 — 美 AI 모멘텀 동조 + 부양 기대 추가 부각, 철강·화학·소재 후방 모멘텀 분기 신호.</td></tr>
+    <tr><td><span class="tk">HSI (6/3)</span><br><span class="co">홍콩</span></td><td>차익실현</td><td><span class="pct-pill dn">-1.73%</span></td><td class="nt">홍콩 차익실현 약세 — 단기 모멘텀 후퇴, 中 본토·美 강세와 디커플링, 단기 변동성 누적 신호.</td></tr>
+  </tbody>
+</table>
+
+<div class="stit nb">🗳️ 6/3 지방선거 + 6/4 KOSPI 재개장 시나리오 · 환율 1,520원 위협 가속 · NVDA Computex 모멘텀 연장</div>
+
+<div class="g2 mb nb">
+  <div class="dcard">
+    <div class="dcard-t">🗳️ 제9회 전국동시지방선거 (6/3 휴장)</div>
+    <div class="dr"><span class="dr-l">선거 종류</span><span class="dr-r">광역단체장·기초단체장·지방의원·교육감</span></div>
+    <div class="dr"><span class="dr-l">유권자</span><span class="dr-r">약 4,464만명</span></div>
+    <div class="dr"><span class="dr-l">현 정부 지지율</span><span class="dr-r c-up">59.8% (대통령 이재명)</span></div>
+    <div class="dr"><span class="dr-l">여당 우세</span><span class="dr-r c-up">17개 광역단체장 중 15개 이상 기대</span></div>
+    <div class="dr"><span class="dr-l">시장 영향</span><span class="dr-r c-am">정책 연속성 강화 시그널</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">💵 환율·채권·원자재 (환율 1,520원 위협 + 美 금리 안정)</div>
+    <div class="dr"><span class="dr-l">USD/KRW (NDF)</span><span class="dr-r c-dn">1,527.34원 (+0.67%)</span></div>
+    <div class="dr"><span class="dr-l">한은 기준금리</span><span class="dr-r c-am">2.50% (CPI 매파 동결 장기화)</span></div>
+    <div class="dr"><span class="dr-l">美 10Y</span><span class="dr-r c-gn">4.43% (-4.3bp 안정)</span></div>
+    <div class="dr"><span class="dr-l">WTI / Brent</span><span class="dr-r c-dn">91.19 / 95.50 (소폭 안정)</span></div>
+    <div class="dr"><span class="dr-l">금 / DXY</span><span class="dr-r c-am">4,567 / 99 (강세)</span></div>
+  </div>
+</div>
+
+<div class="stit nb">🌊 야간 모멘텀 점검 — NVDA Computex Taipei + Marvell 사상급 + 美 신고가 행진 (6/4 KOSPI 재개장 진원지)</div>
+
+<div class="g2 nb">
+  <div class="flow-card">
+    <div class="flow-hdr">🔥 6/2 美 AI·반도체 광역 폭등 — 6/4 KOSPI 진원지 후보</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-up">MRVL</span><span class="flow-desc">Jensen Huang Computex 「차세대 트릴리언달러」 발언 사상급</span><span class="flow-val c-up">+32.5%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">HPE</span><span class="flow-desc">AI 서버 실적 강세 + 데이터센터 수요 가속</span><span class="flow-val c-up">+19.0%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">NVDA</span><span class="flow-desc">Computex Taipei 키노트 + NVLink Fusion 협력 강조</span><span class="flow-val c-up">강세</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">S&P500</span><span class="flow-desc">7,600선 첫 안착 신고가 추가 갱신</span><span class="flow-val c-up">+0.13%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">DJI</span><span class="flow-desc">51,300선 신고가 추가 갱신 — 대형주 광역 강세</span><span class="flow-val c-up">+0.45%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">NIKKEI</span><span class="flow-desc">사상 신고가 — 美 AI 동조 + 엔 약세, 6/4 갭 메우기 모멘텀</span><span class="flow-val c-up">+2.94%</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">시사점</span><span class="flow-desc">반도체·AI 인프라·MLCC·전력기기 광역 모멘텀, 6/4 KOSPI 빅캡 분산 회복 진원지 후보</span><span class="flow-val c-up">AI 광역</span></div>
+    </div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hdr">⚠️ 6/4 KOSPI 재개장 분기 변수 — 환율 + 지방선거 결과 + 6/6 NFP</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-dn">USD/KRW</span><span class="flow-desc">1,520원 위협 가속 — 외인 매도 자극 변수 누적</span><span class="flow-val c-dn">+0.67%</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">지방선거 결과</span><span class="flow-desc">여당 우세 시 정책 연속성 + 부동산·인프라 정책 강화 기대</span><span class="flow-val c-am">정책 변수</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">美 ISM 제조</span><span class="flow-desc">6/2 발표 + Fed 경기 시그널 점검 분기점</span><span class="flow-val c-am">점검</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">美 ADP 고용</span><span class="flow-desc">6/3 21:15 KST 발표 — NFP 사전 시그널 분기점</span><span class="flow-val c-am">사전</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">6/4 갭 메우기</span><span class="flow-desc">아시아 강세 누적 + 美 신고가 행진 + AI 폭등 동조</span><span class="flow-val c-up">강세 갭</span></div>
+      <div class="flow-r"><span class="flow-sec c-dn">6/6 NFP</span><span class="flow-desc">예상 상회 시 美10Y 반등 + 강달러 가속 위험</span><span class="flow-val c-dn">분기점</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ftr"><p>📊 페이지 2 / 3 · 美 6/2 종목 하이라이트 · 지방선거 · 6/4 재개장 분기 변수</p></div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page page-break">
+
+<div class="stit nb">🧠 종목·테마 분석 (KRX 휴장 + 美 신고가 행진 + NVDA Computex + Marvell 사상급 + 환율 1,520원 위협)</div>
+
+<div class="ins i-slate nb">
+  <span class="ins-tag" style="background:var(--slate6);color:var(--slate);">KRX 휴장</span>
+  <h3>제9회 전국동시지방선거 임시공휴일 KRX 전 시장 휴장 — 정규장·파생·일반상품 동시 휴장, 다음 거래일 6/4 (목) 재개장</h3>
+  <p>2026년 6월 3일 (수) 제9회 전국동시지방선거 임시공휴일로 KRX 정규장·EUREX 연계 글로벌시장 포함 파생상품 시장·석유·금·탄소배출권 일반상품 시장 모두 휴장. 약 4,464만명 유권자가 광역·기초단체장·지방의원·교육감을 동시 선출하는 빅이벤트로 정책 연속성 검증 분기점. 현 정부 지지율 강세 + 여당 17개 광역단체장 중 15개 이상 우세 전망으로 정책 연속성 강화 시그널 부각. 6/4 (목) 정규장 재개장 시 美 6/2 신고가 행진 + Marvell 사상급 폭등 + NVDA Computex 모멘텀 + Nikkei 신고가가 한 번에 반영될 갭 모멘텀 누적, 동시에 환율 1,520원 위협 + 외인 17일째 매도 사이클 부담도 누적된 상태.</p>
+</div>
+
+<div class="ins i-green nb">
+  <span class="ins-tag" style="background:var(--green-bg);color:var(--green);">美 신고가 + AI 폭등</span>
+  <h3>美 6/2 S&P500·DJI 신고가 추가 갱신 + Marvell 사상급 폭등 + NVDA Computex Taipei — 6/4 KOSPI 빅캡 분산 회복 진원지 후보</h3>
+  <p>美 S&P500이 7,609선 첫 안착으로 신고가 추가 갱신, DJI도 51,307선 신고가 갱신 — 대형주 광역 강세 사이클 가속. Marvell이 Jensen Huang Computex Taipei 키노트 「차세대 트릴리언달러 기업」 발언으로 사상급 단일일 폭등 — NVLink Fusion·AI 인프라 협력 모멘텀이 한미반도체·LX세미콘·후방 반도체 광역 강세 진원지 후보. HPE 강세 + AI 서버 수요 가속이 삼성전기·LG이노텍 MLCC·서버 후방 모멘텀 연장 시그널. NVDA Computex Taipei 키노트의 NVLink Fusion·Marvell·HBM 협력 강조가 SK하이닉스·삼성전자 HBM 사이클 연장 트리거로 작용, 6/4 KOSPI 재개장 시 반도체 빅2 + 후방 MLCC + AI 인프라 광역 회복 모멘텀 동시 분출 가능성 누적.</p>
+</div>
+
+<div class="ins i-red nb">
+  <span class="ins-tag" style="background:var(--red-bg);color:var(--red);">환율 1,520원 위협</span>
+  <h3>USD/KRW NDF 추가 약세 가속 — 1,520원 위협 가시화, 외인 17일째 매도 사이클 + 美 신고가 + 강달러 부담 누적</h3>
+  <p>USD/KRW NDF 시장에서 원화가 추가 약세로 1,520원 위협 가속 — 6/2 KOSPI 정규장 종가 대비 +0.67% 약세 추가 진행. 美 신고가 행진 + DXY 강세 + 한국 5월 CPI 26개월 만 최대 매파 충격 + 외인 17거래일째 사상최대급 매도 사이클이 환율 약세 진원지 누적. 휴장기 NDF 추가 약세는 6/4 KOSPI 재개장 시 외인 매도 추가 자극 변수, 다만 美10Y 4.43% 안정 + VIX 16.10 안정세는 글로벌 리스크 톤 압축 시그널로 단기 환율 충격 흡수 여지 일부 잔존. 6/3 휴장 + 6/4 재개장 + 6/6 NFP 빅이벤트 연속 구간으로 환율·금리·수급 동시 분기 가속 단계 진입.</p>
+</div>
+
+<div class="ins i-amber nb">
+  <span class="ins-tag" style="background:var(--amber-bg);color:var(--amber);">지방선거 + 6/4 재개장 변수</span>
+  <h3>제9회 지방선거 결과 + 6/4 KOSPI 재개장 갭 메우기 + 6/6 NFP — 사흘 연속 분기 빅이벤트 누적, 변동성 추가 폭증 가능</h3>
+  <p>6/3 지방선거 결과는 6/4 재개장 시 정책 연속성·부동산·인프라·방산·원전 정책 강화 시그널 분기 변수로 작용. 여당 우세 전망 시 정책 연속성 + 인프라·전력기기·방산 모멘텀 강화 기대, 반대 시 단기 정책 불확실성 부담. 6/4 갭 메우기는 美 신고가 + Marvell 사상급 + NVDA Computex + Nikkei 신고가 누적 모멘텀이 한 번에 반영되는 빅이벤트로 빅캡 광역 분산 회복 진원지 후보. 6/6 美 NFP는 Fed 금리 경로 재설정 핵심 분기점 — 예상 상회 시 美10Y 반등 + 강달러 가속이 환율 1,520원 돌파 자극 위험. 사흘 연속 빅이벤트로 단기 변동성 추가 폭증 가능성 누적, 매기 광역 분산 회복 모멘텀과 외인 매도 사이클 누적 부담 동시 진행 구간.</p>
+</div>
+
+<div class="g2 nb mb">
+  <div class="strat">
+    <div class="strat-mode">📋 단계별 전략</div>
+    <ul class="strat-list">
+      <li><span class="bullet">1</span><span><b>휴장기 「관망 + 6/4 재개장 시나리오 점검」</b> — KRX 전 시장 휴장. 美 6/2 종가 + 아시아 6/3 흐름 + NDF 환율 + Computex 후속 일정 모니터링 권고, 무리한 NDF·해외선물 추격 자제.</span></li>
+      <li><span class="bullet">2</span><span><b>반도체·AI 인프라 「6/4 갭 메우기 분할」</b> — Marvell·NVDA·HPE 모멘텀 누적. SK하이닉스·삼성전자·한미반도체·삼성전기 6/4 갭 강세 시 분할 익절 + 추가 추격은 NFP 결과 확인 후 진입 권고.</span></li>
+      <li><span class="bullet">3</span><span><b>방산·전력기기 「추세 보유 + 정책 모멘텀 점검」</b> — 지방선거 결과 따라 인프라·방산·원전 정책 강화 기대. 한화에어로·LIG넥스원·LS일렉트릭 추세 보유 유지, 단 추격은 분할 권고.</span></li>
+      <li><span class="bullet">4</span><span><b>환율 헷지 「1,520원 돌파 대응 시나리오 사전 점검」</b> — NDF 1,527원 누적. 환율 추가 약세 시 외인 매도 자극 + KOSDAQ 약세 가속 위험, 수출주·내수주 환율 비중 사전 점검 권고.</span></li>
+    </ul>
+  </div>
+
+  <div class="dcard" style="border-color:#fca5a5;background:#fef2f2;">
+    <div class="dcard-t" style="color:var(--red);">⚠️ 핵심 리스크</div>
+    <div style="font-size:8pt;color:#7f1d1d;line-height:1.65;">
+      <div style="margin-top:6px;"><b>① 환율 1,520원 위협 가속</b> — NDF 1,527원 누적, 6/4 재개장 시 외인 매도 추가 자극 위험. 1,520원 돌파 시 KOSPI 디스카운트 가속.</div>
+      <div style="margin-top:6px;"><b>② 외인 17일째 매도 사이클 누적</b> — 6/2 사상최대급 단일일 매도 + 환율 약세 + 美 신고가 + Computex 모멘텀 동시 진행, 6/4 추가 매도 vs 분산 회복 분기 변수.</div>
+      <div style="margin-top:6px;"><b>③ 6/3 휴장기 → 6/4 갭 메우기 변동성</b> — 美 신고가 + Marvell 사상급 + NVDA Computex + Nikkei 신고가 동시 반영, 시초 갭업 후 차익실현 변동성 위험 누적.</div>
+      <div style="margin-top:6px;"><b>④ 美 ADP(6/3)·NFP(6/6) 연속 빅이벤트</b> — 예상 상회 시 美10Y 반등 + 강달러 가속, KOSPI 6/4 강세 모멘텀 위축 위험.</div>
+      <div style="margin-top:6px;"><b>⑤ 지방선거 결과 분기 변수</b> — 여당 우세 전망 시 정책 연속성 강화, 단 변동성 예외 시 단기 정책 불확실성 부담 발생 가능.</div>
+    </div>
+  </div>
+</div>
+
+<div class="stit nb">📅 향후 일정 (단기 빅이벤트)</div>
+
+<div class="sched mb nb">
+  <div class="dr"><span class="dr-l"><span class="tag s">6/3 수</span> 제9회 전국동시지방선거 KRX 휴장 · NVDA Computex Taipei 연장</span><span class="dr-r c-sl">정책·반도체 모멘텀</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag r">6/4 목</span> KOSPI/KOSDAQ 재개장 (지방선거 결과 + 美 신고가 갭 메우기)</span><span class="dr-r c-up">재개장 분기점</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag y">6/3 수</span> 美 ADP 5월 고용지표 (21:15 KST) · JOLTS 4월 (23:00 KST)</span><span class="dr-r c-am">NFP 사전 시그널</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag r">6/6 금</span> 美 5월 NFP 고용지표 (21:30 KST)</span><span class="dr-r c-up">Fed 금리 경로 핵심</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag b">6/11 목</span> 美 5월 CPI · ECB 금리 결정</span><span class="dr-r c-dn">물가·금리 분기점</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag r">6/16~17</span> 美 FOMC (점도표 + 파월 기자회견)</span><span class="dr-r c-up">금리 경로 재설정</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag g">7월~</span> SK하이닉스 HBM4 본격 공급 + 2Q 실적 시즌</span><span class="dr-r c-gn">반도체 모멘텀 검증</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag b">7/10</span> 한국은행 7월 금통위 (매파 시그널 점검)</span><span class="dr-r c-dn">금리 경로 재확인</span></div>
+</div>
+
+<div class="summ nb">
+  <div class="summ-hdr">💡 오늘의 핵심 3줄 요약</div>
+  <div class="summ-body">
+    <div class="summ-item"><span class="summ-n">1</span><span class="summ-t"><b>KRX 전 시장 휴장 — 제9회 전국동시지방선거 임시공휴일</b> · KOSPI·KOSDAQ·파생·일반상품 모두 휴장, 다음 거래일 6/4(목) 재개장 — 직전 종가 KOSPI 8,801·KOSDAQ 1,026 (6/2 기준).</span></div>
+    <div class="summ-item"><span class="summ-n">2</span><span class="summ-t"><b>美 S&P500·DJI 신고가 추가 갱신 + Marvell 사상급 폭등 + NVDA Computex Taipei + Nikkei 신고가</b> — 6/4 재개장 시 반도체·AI 인프라 광역 모멘텀 동시 반영 갭 메우기 후보.</span></div>
+    <div class="summ-item"><span class="summ-n">3</span><span class="summ-t"><b>USD/KRW NDF 1,527원 위협 가속 + 외인 17일째 매도 사이클 누적</b> — 6/4 재개장 분기 변수 + 6/6 NFP·6/16 FOMC 사흘 연속 빅이벤트 누적 단계.</span></div>
+  </div>
+</div>
+
+<div class="ftr">
+  <p>📊 페이지 3 / 3 · 종목분석·전략·리스크·일정</p>
+  <p>작성: 리송 자동 마감 브리핑 시스템 · 데이터 소스: 한국거래소·CNBC·Yahoo Finance·yfinance·중앙선관위·한국은행 (KRX 휴장으로 정규장 데이터 없음)</p>
+</div>
+
+</div>
+
+</body>
+</html>
