@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>국내 시장 장 마감 브리핑 | 2026.08.18</title>
+<style>
+  @page { size: A4 portrait; margin: 2mm 2.4mm; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  :root { --red:#dc2626;--red-bg:#fef2f2;--red-light:#fee2e2;--blue:#2563eb;--blue-bg:#eff6ff;--blue-light:#dbeafe;--green:#16a34a;--green-bg:#f0fdf4;--amber:#d97706;--amber-bg:#fffbeb;--slate:#334155;--slate2:#64748b;--slate3:#94a3b8;--slate4:#cbd5e1;--slate5:#e2e8f0;--slate6:#f1f5f9;--white:#ffffff;--ink:#0f172a; }
+  * { box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important; }
+  body { font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--ink);background:var(--white);font-size:13.5pt;line-height:1.5; }
+  .page { width:100%;max-width:100%;margin:0 auto; }
+  .page-break { page-break-before:always; }
+  .nb { page-break-inside:avoid;break-inside:avoid; }
+  @media screen { body{background:#e2e8f0;padding:0;margin:0;} .page{background:#fff;padding:4px 6px;box-shadow:0 4px 20px rgba(0,0,0,0.12);border-radius:6px;margin-bottom:4px;width:100%;max-width:100%;} }
+  @media print { .page{width:100%;max-width:100%;padding:0;} }
+  .hdr { background:linear-gradient(135deg,#7f1d1d 0%,#991b1b 50%,#b91c1c 100%) !important;border-radius:8px;padding:14px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;color:#fff; }
+  .hdr h1 { font-size:22.5pt;font-weight:900;letter-spacing:-0.8px; }
+  .hdr .sub { font-size:11.25pt;color:#fecaca;margin-top:2px;font-weight:400; }
+  .hdr .dt { background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.2);padding:5px 14px;border-radius:20px;font-size:12pt;font-weight:700; }
+  .hero { background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%) !important;border:1.5px solid #93c5fd;border-radius:8px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px; }
+  .hero.green { background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%) !important;border-color:#86efac; }
+  .hero.amber { background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%) !important;border-color:#fcd34d; }
+  .hero.red { background:linear-gradient(135deg,#fef2f2 0%,#fff1f2 100%) !important;border-color:#fca5a5; }
+  .hero.slate { background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%) !important;border-color:#94a3b8; }
+  .hero-icon { width:36px;height:36px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#fff; }
+  .hero.green .hero-icon { background:var(--green); }
+  .hero.amber .hero-icon { background:var(--amber); }
+  .hero.red .hero-icon { background:var(--red); }
+  .hero.slate .hero-icon { background:var(--slate); }
+  .hero-text { font-size:12.75pt;color:#1e3a8a;line-height:1.6; }
+  .hero.green .hero-text { color:#166534; }
+  .hero.amber .hero-text { color:#92400e; }
+  .hero.red .hero-text { color:#991b1b; }
+  .hero.slate .hero-text { color:#0f172a; }
+  .hero-text b { color:var(--blue); }
+  .hero.green .hero-text b { color:var(--green); }
+  .hero.amber .hero-text b { color:var(--amber); }
+  .hero.red .hero-text b { color:var(--red); }
+  .hero.slate .hero-text b { color:var(--slate); }
+  .kpi-row { display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:12px; }
+  .kpi { text-align:center;padding:8px 4px;border-radius:6px;border:1px solid var(--slate5); }
+  .kpi.neg { background:var(--blue-bg);border-color:var(--blue-light); }
+  .kpi.pos { background:var(--red-bg);border-color:var(--red-light); }
+  .kpi.neu { background:var(--slate6); }
+  .kpi-lb { font-size:9.75pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.5px; }
+  .kpi-v { font-size:19.5pt;font-weight:900;margin-top:2px; }
+  .top2 { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px; }
+  .sent { border:1px solid var(--slate5);border-radius:8px;padding:12px 14px;background:var(--white); }
+  .sent-hdr { display:flex;align-items:center;gap:8px;margin-bottom:10px; }
+  .sent-badge { font-size:16.5pt;font-weight:900;color:var(--slate);background:var(--slate6);border:1px solid var(--slate5);padding:4px 12px;border-radius:16px; }
+  .sent-mode { font-size:11.25pt;font-weight:700;color:var(--slate);background:var(--slate6);border:1px solid var(--slate5);padding:3px 10px;border-radius:12px; }
+  .gauge-wrap { margin-top:6px; }
+  .idx-grid { display:grid;grid-template-columns:1fr 1fr;gap:6px; }
+  .ix { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px;position:relative;overflow:hidden; }
+  .ix::after { content:'';position:absolute;top:0;left:0;right:0;height:3px; }
+  .ix.dn::after { background:var(--blue); }
+  .ix.up::after { background:var(--red); }
+  .ix.neu::after { background:var(--slate3); }
+  .ix-n { font-size:9.75pt;color:var(--slate3);font-weight:700;text-transform:uppercase;letter-spacing:0.4px; }
+  .ix-v { font-size:21pt;font-weight:900;margin:1px 0; }
+  .ix-c { font-size:12pt;font-weight:700; }
+  .ix-t { font-size:9.75pt;display:inline-block;padding:1px 5px;border-radius:3px;font-weight:700;margin-top:2px; }
+  .t-dn { background:var(--blue-bg);color:var(--blue); }
+  .t-up { background:var(--red-bg);color:var(--red); }
+  .t-warn { background:var(--amber-bg);color:var(--amber); }
+  .t-neu { background:var(--slate6);color:var(--slate); }
+  .stit { font-size:15pt;font-weight:900;color:var(--ink);margin-bottom:6px;padding-bottom:4px;border-bottom:2.5px solid var(--ink);display:flex;align-items:center;gap:6px; }
+  .g3 { display:grid;grid-template-columns:repeat(3,1fr);gap:8px; }
+  .g2 { display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+  .mb { margin-bottom:10px; }
+  .dcard { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px;background:var(--white); }
+  .dcard-t { font-size:10.5pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.3px;margin-bottom:5px; }
+  .dr { display:flex;justify-content:space-between;align-items:center;padding:3px 0; }
+  .dr + .dr { border-top:1px solid var(--slate6); }
+  .dr-l { font-size:11.25pt;color:var(--slate2); }
+  .dr-r { font-size:11.25pt;font-weight:700; }
+  .sec-chart { border:1px solid var(--slate5);border-radius:6px;padding:10px 12px; }
+  .sec-r { display:flex;align-items:center;gap:6px;padding:4px 0; }
+  .sec-r + .sec-r { border-top:1px solid var(--slate6); }
+  .sec-nm { flex:0 0 80px;font-size:11.25pt;color:var(--slate2);font-weight:500; }
+  .sec-vis { flex:1;display:flex;align-items:center;height:16px;position:relative; }
+  .sec-vis .mid { position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--slate4); }
+  .sec-bar-c { width:50%;display:flex;align-items:center;height:100%; }
+  .sec-bar-c.left { justify-content:flex-end; }
+  .sec-bar-c.right { justify-content:flex-start; }
+  .sb { height:12px;border-radius:2px;min-width:2px;transition:width 0.3s; }
+  .sb.up { background:linear-gradient(90deg,#fca5a5,var(--red)) !important;border-radius:0 2px 2px 0; }
+  .sb.dn { background:linear-gradient(90deg,var(--blue),#93c5fd) !important;border-radius:2px 0 0 2px; }
+  .sec-v { flex:0 0 42px;text-align:right;font-size:12pt;font-weight:800; }
+  .tbl { width:100%;border-collapse:collapse;border:1px solid var(--slate5);border-radius:6px;overflow:hidden; }
+  .tbl th { font-size:9.75pt;font-weight:700;color:var(--slate3);text-transform:uppercase;letter-spacing:0.4px;padding:6px 8px;text-align:left;background:var(--slate6);border-bottom:1.5px solid var(--slate5); }
+  .tbl td { padding:5px 8px;font-size:12pt;border-bottom:1px solid var(--slate6); }
+  .tbl tr:last-child td { border-bottom:none; }
+  .tbl tr:nth-child(even) td { background:#fafbfc; }
+  .tk { font-weight:900;font-size:13.5pt;letter-spacing:0.3px; }
+  .co { color:var(--slate3);font-size:9.75pt;font-weight:500; }
+  .nt { color:var(--slate2);font-size:10.5pt;line-height:1.5; }
+  .pct-pill { display:inline-block;padding:2px 7px;border-radius:4px;font-weight:800;font-size:12.75pt; }
+  .pct-pill.dn { background:var(--blue-bg);color:var(--blue); }
+  .pct-pill.up { background:var(--red-bg);color:var(--red); }
+  .pct-pill.neu { background:var(--slate6);color:var(--slate); }
+  .ins { border-radius:6px;padding:10px 12px;margin-bottom:6px;border:1px solid var(--slate5);position:relative;overflow:hidden; }
+  .ins::before { content:'';position:absolute;left:0;top:0;bottom:0;width:4px; }
+  .ins.i-blue::before { background:var(--blue); }
+  .ins.i-red::before { background:var(--red); }
+  .ins.i-green::before { background:var(--green); }
+  .ins.i-amber::before { background:var(--amber); }
+  .ins.i-slate::before { background:var(--slate); }
+  .ins-tag { display:inline-block;font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;padding:2px 7px;border-radius:3px;margin-bottom:4px; }
+  .ins h3 { font-size:13.5pt;font-weight:800;margin-bottom:3px;line-height:1.4; }
+  .ins p { font-size:11.25pt;color:var(--slate2);line-height:1.65; }
+  .strat { border:2px solid var(--amber);border-radius:8px;padding:12px 14px;background:linear-gradient(135deg,var(--amber-bg) 0%,#fff 100%) !important; }
+  .strat-mode { display:inline-block;background:var(--amber);color:#fff;padding:5px 16px;border-radius:6px;font-size:16.5pt;font-weight:900;margin-bottom:10px;letter-spacing:-0.3px; }
+  .strat-list { list-style:none; }
+  .strat-list li { padding:4px 0;font-size:12pt;color:var(--slate2);display:flex;gap:6px;align-items:flex-start; }
+  .strat-list li + li { border-top:1px solid #fde68a; }
+  .strat-list .bullet { display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--amber);color:#fff;font-size:9.75pt;font-weight:800;flex-shrink:0;margin-top:1px; }
+  .summ { border:2px solid var(--blue);border-radius:8px;overflow:hidden; }
+  .summ-hdr { background:var(--blue);color:#fff;padding:6px 14px;font-size:13.5pt;font-weight:800; }
+  .summ-body { padding:10px 14px;background:var(--blue-bg); }
+  .summ-item { display:flex;gap:10px;padding:6px 0;align-items:flex-start; }
+  .summ-item + .summ-item { border-top:1px solid #bfdbfe; }
+  .summ-n { width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-size:15pt;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+  .summ-t { font-size:12.75pt;font-weight:600;line-height:1.65;color:var(--ink); }
+  .sched { border:1px solid var(--slate5);border-radius:6px;padding:8px 10px; }
+  .sched .dr-l { font-size:12pt; }
+  .tag { display:inline-block;font-size:9pt;font-weight:700;padding:2px 6px;border-radius:8px; }
+  .tag.r { background:var(--red-bg);color:var(--red);border:1px solid var(--red-light); }
+  .tag.b { background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-light); }
+  .tag.y { background:var(--amber-bg);color:var(--amber);border:1px solid #fde68a; }
+  .tag.g { background:var(--green-bg);color:var(--green);border:1px solid #bbf7d0; }
+  .tag.s { background:var(--slate6);color:var(--slate);border:1px solid var(--slate5); }
+  .flow-card { border:1px solid var(--slate5);border-radius:6px;overflow:hidden; }
+  .flow-card .flow-hdr { background:var(--slate6);padding:5px 10px;font-size:10.5pt;font-weight:700;color:var(--slate2);text-transform:uppercase; }
+  .flow-card .flow-body { padding:6px 10px; }
+  .flow-r { display:grid;grid-template-columns:70px 1fr auto;gap:6px;align-items:center;padding:4px 0; }
+  .flow-r + .flow-r { border-top:1px solid var(--slate6); }
+  .flow-sec { font-size:12pt;font-weight:800;color:var(--ink); }
+  .flow-desc { font-size:10.5pt;color:var(--slate2); }
+  .flow-val { font-size:11.25pt;font-weight:800;text-align:right; }
+  .ftr { text-align:center;padding:10px 0;margin-top:8px;border-top:1.5px solid var(--slate5); }
+  .ftr p { font-size:9.75pt;color:var(--slate3);line-height:1.7; }
+  .c-up { color:var(--red); } .c-dn { color:var(--blue); }
+  .c-gn { color:var(--green); } .c-am { color:var(--amber); } .c-sl { color:var(--slate); }
+
+  /* ===== 데스크탑·태블릿·아이패드 (min-width: 768px) ===== */
+  @media screen and (min-width: 768px) {
+    body { padding: 0 !important; margin: 0 !important; }
+    .page { width: 100% !important; max-width: 100% !important; padding: 6px 8px !important; border-radius: 8px; margin-left:0 !important; margin-right:0 !important; }
+  }
+
+  /* ===== 모바일 반응형 (max-width: 767px) ===== */
+  @media screen and (max-width: 767px) {
+    body { font-size: 19.5px; line-height: 1.55; padding: 0 !important; margin: 0 !important; background: #f1f5f9; }
+    .page { width: 100% !important; max-width: 100% !important; padding: 4px 4px !important; margin: 0 0 2px 0 !important; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .page-break { page-break-before: auto; }
+
+    .hdr { padding: 12px 14px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .hdr h1 { font-size: 25.5px; line-height: 1.3; }
+    .hdr .sub { font-size: 16.5px; line-height: 1.5; }
+    .hdr .dt { font-size: 16.5px; padding: 4px 12px; align-self: flex-start; }
+
+    .hero { flex-direction: row; align-items: flex-start; padding: 12px 14px; gap: 10px; }
+    .hero-icon { width: 32px; height: 32px; font-size: 24px; }
+    .hero-text { font-size: 18.75px; line-height: 1.65; }
+
+    .kpi-row { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .kpi { padding: 8px 4px; }
+    .kpi-lb { font-size: 13.5px; }
+    .kpi-v { font-size: 22.5px; }
+
+    .top2 { grid-template-columns: 1fr; gap: 10px; }
+    .g3 { grid-template-columns: 1fr; gap: 8px; }
+    .g2 { grid-template-columns: 1fr; gap: 8px; }
+
+    .idx-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .ix { padding: 8px 10px; }
+    .ix-n { font-size: 13.5px; }
+    .ix-v { font-size: 24px; }
+    .ix-c { font-size: 16.5px; }
+    .ix-t { font-size: 13.5px; }
+
+    .sent { padding: 12px 14px; }
+    .sent-badge { font-size: 19.5px; }
+    .sent-mode { font-size: 15px; }
+
+    .dcard { padding: 10px 12px; }
+    .dcard-t { font-size: 15px; }
+    .dr { padding: 4px 0; }
+    .dr-l, .dr-r { font-size: 16.5px; }
+
+    .stit { font-size: 19.5px; padding-bottom: 5px; margin-bottom: 8px; }
+
+    .sec-chart { padding: 10px 10px; }
+    .sec-nm { flex: 0 0 88px; font-size: 15px; }
+    .sec-v { flex: 0 0 50px; font-size: 16.5px; }
+
+    .tbl { font-size: 16.5px; }
+    .tbl th { font-size: 13.5px; padding: 6px 6px; }
+    .tbl td { padding: 6px 6px; font-size: 16.5px; }
+    .tk { font-size: 18px; }
+    .co { font-size: 13.5px; }
+    .nt { font-size: 15.75px; line-height: 1.55; }
+    .pct-pill { font-size: 16.5px; padding: 2px 6px; }
+
+    .ins { padding: 12px 14px; margin-bottom: 8px; }
+    .ins h3 { font-size: 19.5px; line-height: 1.45; }
+    .ins p { font-size: 17.25px; line-height: 1.7; }
+    .ins-tag { font-size: 13.5px; }
+
+    .flow-card .flow-hdr { font-size: 15px; padding: 6px 10px; line-height: 1.5; }
+    .flow-r { grid-template-columns: 90px 1fr auto; row-gap: 4px; }
+    .flow-sec { font-size: 16.5px; }
+    .flow-desc { font-size: 15.75px; line-height: 1.6; }
+    .flow-val { font-size: 16.5px; }
+
+    .strat { padding: 12px 14px; }
+    .strat-mode { font-size: 19.5px; padding: 6px 14px; }
+    .strat-list li { font-size: 17.25px; padding: 6px 0; line-height: 1.7; }
+    .strat-list .bullet { width: 18px; height: 18px; font-size: 13.5px; }
+
+    .sched .dr-l { font-size: 16.5px; line-height: 1.6; }
+    .sched .dr-r { font-size: 15.75px; }
+    .tag { font-size: 13.5px; }
+
+    .summ-hdr { font-size: 18px; padding: 7px 14px; }
+    .summ-body { padding: 10px 12px; }
+    .summ-t { font-size: 18px; line-height: 1.7; }
+    .summ-n { width: 22px; height: 22px; font-size: 18px; }
+
+    .ftr p { font-size: 14.25px; line-height: 1.65; }
+  }
+
+  /* ===== 매우 좁은 화면 (max-width: 420px) ===== */
+  @media screen and (max-width: 420px) {
+    .page { padding: 3px 3px !important; margin: 0 !important; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .idx-grid { grid-template-columns: 1fr; }
+    .ix-v { font-size: 27px; }
+    .hero-text { font-size: 18px; }
+    .tbl th { font-size: 12.75px; padding: 5px 4px; }
+    .tbl td { padding: 5px 4px; font-size: 15.75px; }
+    .tk { font-size: 16.5px; }
+    .nt { font-size: 15px; }
+    .pct-pill { font-size: 15.75px; padding: 2px 5px; }
+    .flow-r { grid-template-columns: 70px 1fr auto; }
+  }
+</style>
+</head><body><!-- PAGE 1 -->
+<div class="page">
+<div class="hdr nb" style="background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 50%,#2563eb 100%) !important;">
+  <div>
+    <h1>🇰🇷 국내 시장 장 마감 브리핑</h1>
+    <div class="sub" style="color:#bfdbfe;">8/18(화) 마감 — 코스피 장중 7,200선 돌파 후 상승분 전량 반납·급반락·코스닥 3%대 급락·기관 대량 순매도·개인 매수 방어·외국인 소폭 순매수·2차전지·바이오·조선·인터넷 광역 약세·보험·통신·해운 방어·원화 강세·VIX 급등·출처 KRX·네이버금융·뉴스핌·파이낸셜뉴스·다음</div>
+  </div>
+  <div class="dt">2026. 8. 18 (화)</div>
+</div>
+
+<div class="hero blue nb">
+  <div class="hero-icon">🔻</div>
+  <div class="hero-text">
+    <b>🔻 코스피가 장 초반 7,200선을 돌파하는 급등으로 출발했다가 상승분을 전량 반납하고 급반락 마감했고, 코스닥은 더 가파른 급락세를 보였다.</b>
+    <b>기관이 대량 순매도로 지수를 끌어내린 반면 개인은 매수로 방어했고 외국인은 소폭 순매수에 그쳤으며, 원화는 강세로 안정됐다.</b>
+    <b>2차전지·바이오·조선·인터넷이 광역 약세를 보인 반면 보험·통신·해운은 방어했고, 관전 포인트는 급등 되돌림 지속 여부와 글로벌 변동성 확대다.</b>
+  </div>
+</div>
+
+<div class="kpi-row nb">
+  <div class="kpi neg"><div class="kpi-lb">KOSPI</div><div class="kpi-v c-dn">급반락</div></div>
+  <div class="kpi neg"><div class="kpi-lb">KOSDAQ</div><div class="kpi-v c-dn">3%대 급락</div></div>
+  <div class="kpi neg"><div class="kpi-lb">기관</div><div class="kpi-v c-dn">대량 순매도</div></div>
+  <div class="kpi pos"><div class="kpi-lb">개인</div><div class="kpi-v c-up">매수 방어</div></div>
+  <div class="kpi pos"><div class="kpi-lb">USD/KRW</div><div class="kpi-v c-up">원화 강세</div></div>
+  <div class="kpi neg"><div class="kpi-lb">VIX</div><div class="kpi-v c-dn">급등</div></div>
+</div>
+
+<div class="top2 nb mb">
+  <div class="sent">
+    <div class="sent-hdr">
+      <span class="sent-badge">🔻 코스피 장중 7,200 돌파 후 급반락</span>
+      <span class="sent-mode">기관 대량 순매도 · 2차전지·바이오·조선 광역 약세 · 보험·통신·해운 방어</span>
+    </div>
+    <div style="font-size:7.5pt;color:var(--slate2);margin-bottom:8px;">코스피 장 초반 7,200선 돌파 후 상승분 전량 반납 / 급반락 마감 / 코스닥 3%대 급락 / 기관 대량 순매도 주도 / 개인 매수 방어 / 외국인 소폭 순매수 / 2차전지·바이오·조선·인터넷 광역 약세 / 보험·통신·해운 방어 / 원화 강세 안정 / VIX 급등</div>
+    <div class="gauge-wrap">
+      <div style="position:relative;height:14px;">
+        <svg width="100%" height="10" style="border-radius:5px;display:block;">
+          <defs><linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="18%" stop-color="#3b82f6"/><stop offset="35%" stop-color="#22c55e"/><stop offset="52%" stop-color="#eab308"/><stop offset="68%" stop-color="#f97316"/><stop offset="82%" stop-color="#ef4444"/><stop offset="100%" stop-color="#991b1b"/></linearGradient></defs>
+          <rect width="100%" height="10" rx="5" ry="5" fill="url(#gg)"/>
+          <circle cx="30%" cy="5" r="8" fill="#fff" stroke="#1d4ed8" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:6pt;color:var(--slate3);margin-top:4px;font-weight:500;"><span>극도의 공포</span><span>공포</span><span>중립</span><span>탐욕</span><span>극도의 탐욕</span></div>
+    </div>
+  </div>
+
+  <div class="idx-grid">
+    <div class="ix dn"><div class="ix-n">KOSPI</div><div class="ix-v c-dn">6,869.83</div><div class="ix-c c-dn">▼ 108.11 (-1.55%) <span class="ix-t t-dn">급반락</span></div></div>
+    <div class="ix dn"><div class="ix-n">KOSDAQ</div><div class="ix-v c-dn">834.20</div><div class="ix-c c-dn">▼ 30.45 (-3.52%) <span class="ix-t t-dn">3%대 급락</span></div></div>
+    <div class="ix up"><div class="ix-n">USD/KRW</div><div class="ix-v c-up">1,411</div><div class="ix-c c-up" style="font-size:7pt;">원화 강세 · 환율 하향 안정</div></div>
+    <div class="ix dn"><div class="ix-n">VIX 변동성</div><div class="ix-v c-dn">15.9</div><div class="ix-c c-dn" style="font-size:7pt;">▲ 급등 · 글로벌 위험회피</div></div>
+  </div>
+</div>
+
+<div class="nb">
+<div class="stit">💰 투자자별 수급 (기관 대량 순매도 주도 vs 개인 매수 방어 · 외국인 소폭 순매수 · 잠정)</div>
+<div class="g2 mb">
+  <div class="flow-card">
+    <div class="flow-hdr">📊 KOSPI 수급 (8/18 · 잠정)</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-dn">기관</span><span class="flow-desc">대량 순매도 — 장 초반 급등 구간에서 대형주 차익 실현을 쏟아내며 지수를 끌어내린 동학</span><span class="flow-val c-dn">-7,951억</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">개인</span><span class="flow-desc">순매수 — 급락 구간에서 저가 매수로 지수 낙폭을 방어한 동학</span><span class="flow-val c-up">+7,415억</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">외국인</span><span class="flow-desc">소폭 순매수 — 매수 강도가 크지 않아 지수 방어력이 제한된 동학</span><span class="flow-val c-up">+914억</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">시사점</span><span class="flow-desc">장 초반 급등을 이끌던 매수세가 식으며 기관이 대량 차익 실현으로 지수를 끌어내렸고 개인 매수만으로는 낙폭을 되돌리지 못한 장세</span><span class="flow-val c-dn">기관 주도 급락</span></div>
+    </div>
+  </div>
+  <div class="flow-card">
+    <div class="flow-hdr">📊 KOSDAQ 수급 (8/18 · 잠정)</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-dn">기관</span><span class="flow-desc">순매도 — 성장주 급등 되돌림에 매물을 집중하며 지수를 3%대 급락으로 끌어내린 동학</span><span class="flow-val c-dn">-4,164억</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">개인</span><span class="flow-desc">순매수 — 급락 성장주를 저가 매수로 받아냈으나 낙폭 방어에는 역부족이던 동학</span><span class="flow-val c-up">+3,893억</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">외국인</span><span class="flow-desc">소폭 순매수 — 매수 규모가 미미해 지수 지지력이 약했던 동학</span><span class="flow-val c-up">+366억</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">시사점</span><span class="flow-desc">2차전지·바이오 등 성장주 급락에 기관 매물이 집중되며 코스닥이 코스피보다 훨씬 가파른 낙폭을 보인 장세</span><span class="flow-val c-dn">성장주 급락</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="nb">
+<div class="stit">📊 KRX 업종별 등락 (보험·통신·해운·정유 강세 vs 바이오·IT·2차전지·조선 광역 약세 · 대표주 기준)</div>
+<div class="sec-chart mb">
+  <div class="sec-r"><div class="sec-nm">해운</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:82%"></div></div></div><div class="sec-v c-up">+6.1%</div></div>
+  <div class="sec-r"><div class="sec-nm">보험</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:34%"></div></div></div><div class="sec-v c-up">+2.5%</div></div>
+  <div class="sec-r"><div class="sec-nm">정유·석유</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:26%"></div></div></div><div class="sec-v c-up">+1.9%</div></div>
+  <div class="sec-r"><div class="sec-nm">통신</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"></div><div class="sec-bar-c right"><div class="sb up" style="width:22%"></div></div></div><div class="sec-v c-up">+1.7%</div></div>
+  <div class="sec-r"><div class="sec-nm">반도체</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:14%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-1%</div></div>
+  <div class="sec-r"><div class="sec-nm">자동차</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:50%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-3.7%</div></div>
+  <div class="sec-r"><div class="sec-nm">인터넷</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:60%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-4.5%</div></div>
+  <div class="sec-r"><div class="sec-nm">조선</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:64%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-4.8%</div></div>
+  <div class="sec-r"><div class="sec-nm">2차전지</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:74%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-5.5%</div></div>
+  <div class="sec-r"><div class="sec-nm">바이오·IT</div><div class="sec-vis"><div class="mid"></div><div class="sec-bar-c left"><div class="sb dn" style="width:82%"></div></div><div class="sec-bar-c right"></div></div><div class="sec-v c-dn">-6%</div></div>
+</div>
+</div>
+
+<div class="ftr">
+  <p>📊 작성: 2026.08.18 화요일 17:00 KST · 데이터 소스: 한국거래소·네이버금융·뉴스핌·파이낸셜뉴스·다음</p>
+  <p>본 자료는 정보 제공 목적이며, 투자 권유나 종목 추천이 아닙니다. 투자 판단의 책임은 투자자 본인에게 있습니다.</p>
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page page-break">
+
+<div class="stit nb">📑 KOSPI/KOSDAQ 주요 종목 마감 (2차전지·바이오·조선·인터넷 급락 · 보험·정유·HBM 방어)</div>
+
+<table class="tbl mb nb">
+  <thead><tr><th style="width:24%">종목</th><th style="width:13%">종가(원)</th><th style="width:12%">등락률</th><th>핵심 코멘트</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tk">SK이노베이션</span><br><span class="co">096770 · 정유·에너지</span></td><td>131,500</td><td><span class="pct-pill up">+2.18%</span></td><td class="nt">정유 대표주 강세 — 유가 지지와 방어 성격 매수가 유입되며 급락장에서 역주행한 종목.</td></tr>
+    <tr><td><span class="tk">삼성화재</span><br><span class="co">000810 · 보험</span></td><td>626,000</td><td><span class="pct-pill up">+1.79%</span></td><td class="nt">손해보험 대장주 강세 — 금리·방어주 선호에 매수가 몰리며 지수 하락을 역행한 종목.</td></tr>
+    <tr><td><span class="tk">SK하이닉스</span><br><span class="co">000660 · HBM 빅캡</span></td><td>1,662,000</td><td><span class="pct-pill up">+1.03%</span></td><td class="nt">HBM 대장주 강세 — 반도체 대형주가 급락장에서 상대적 방어력을 보인 종목.</td></tr>
+    <tr><td><span class="tk">삼성전자</span><br><span class="co">005930 · 반도체 대장</span></td><td>268,500</td><td><span class="pct-pill dn">-2.19%</span></td><td class="nt">반도체 대장주 약세 — 지수 동반 하락 속 대형주 매물에 밀린 종목.</td></tr>
+    <tr><td><span class="tk">셀트리온</span><br><span class="co">068270 · 바이오</span></td><td>195,500</td><td><span class="pct-pill dn">-2.74%</span></td><td class="nt">바이오 대표주 약세 — 헬스케어 광역 약세에 동조하며 밀린 종목.</td></tr>
+    <tr><td><span class="tk">POSCO홀딩스</span><br><span class="co">005490 · 철강</span></td><td>324,500</td><td><span class="pct-pill dn">-2.84%</span></td><td class="nt">철강 대장주 약세 — 경기 민감 대형주가 위험회피에 눌린 종목.</td></tr>
+    <tr><td><span class="tk">기아</span><br><span class="co">000270 · 자동차</span></td><td>137,200</td><td><span class="pct-pill dn">-3.18%</span></td><td class="nt">완성차 약세 — 자동차 대형주가 차익 실현 매물에 밀린 종목.</td></tr>
+    <tr><td><span class="tk">LG화학</span><br><span class="co">051910 · 화학·2차전지</span></td><td>270,500</td><td><span class="pct-pill dn">-3.57%</span></td><td class="nt">화학·소재 대표주 약세 — 2차전지 밸류체인 약세에 동반 하락한 종목.</td></tr>
+    <tr><td><span class="tk">현대차</span><br><span class="co">005380 · 자동차</span></td><td>435,000</td><td><span class="pct-pill dn">-3.97%</span></td><td class="nt">완성차 대장주 약세 — 전일 강세를 반납하며 차익 매물이 집중된 종목.</td></tr>
+    <tr><td><span class="tk">HD현대중공업</span><br><span class="co">329180 · 조선</span></td><td>489,500</td><td><span class="pct-pill dn">-4.02%</span></td><td class="nt">조선 대형주 약세 — 조선 광역 차익 실현에 밀린 종목.</td></tr>
+    <tr><td><span class="tk">카카오</span><br><span class="co">035720 · 인터넷</span></td><td>38,250</td><td><span class="pct-pill dn">-4.37%</span></td><td class="nt">인터넷 대표주 약세 — 성장주 되돌림에 매물이 집중된 종목.</td></tr>
+    <tr><td><span class="tk">삼성중공업</span><br><span class="co">010140 · 조선</span></td><td>21,250</td><td><span class="pct-pill dn">-4.71%</span></td><td class="nt">조선 대표주 급락 — 조선주 광역 약세를 이끈 종목.</td></tr>
+    <tr><td><span class="tk">NAVER</span><br><span class="co">035420 · 인터넷</span></td><td>217,000</td><td><span class="pct-pill dn">-4.82%</span></td><td class="nt">인터넷 대장주 급락 — 성장주 차익 실현에 낙폭을 키운 종목.</td></tr>
+    <tr><td><span class="tk">LG에너지솔루션</span><br><span class="co">373220 · 2차전지</span></td><td>351,000</td><td><span class="pct-pill dn">-5.01%</span></td><td class="nt">배터리 대장주 급락 — 2차전지 광역 약세 한복판에서 밀린 종목.</td></tr>
+    <tr><td><span class="tk">알테오젠</span><br><span class="co">196170 · 바이오</span></td><td>298,000</td><td><span class="pct-pill dn">-5.10%</span></td><td class="nt">코스닥 바이오 대장주 급락 — 헬스케어 급락에 낙폭이 컸던 종목.</td></tr>
+    <tr><td><span class="tk">한화오션</span><br><span class="co">042660 · 조선</span></td><td>90,900</td><td><span class="pct-pill dn">-5.11%</span></td><td class="nt">조선 대표주 급락 — 조선 급락 대열의 선봉에 선 종목.</td></tr>
+    <tr><td><span class="tk">삼성SDI</span><br><span class="co">006400 · 2차전지</span></td><td>488,000</td><td><span class="pct-pill dn">-5.43%</span></td><td class="nt">배터리 대표주 급락 — 2차전지 되돌림 매물이 집중된 종목.</td></tr>
+    <tr><td><span class="tk">에코프로비엠</span><br><span class="co">247540 · 2차전지</span></td><td>109,100</td><td><span class="pct-pill dn">-6.51%</span></td><td class="nt">양극재 대표주 급락 — 2차전지 광역 약세의 중심에서 급락한 종목.</td></tr>
+    <tr><td><span class="tk">에코프로</span><br><span class="co">086520 · 2차전지</span></td><td>87,100</td><td><span class="pct-pill dn">-6.94%</span></td><td class="nt">코스닥 2차전지 대장주 급락 — 오늘 낙폭이 가장 컸던 대표 성장주.</td></tr>
+  </tbody>
+</table>
+
+<div class="stit nb">🌏 美 8/17 (현지) + 환율·매크로 (뉴욕 약보합·칩 약세 · 원화 강세 · VIX 급등)</div>
+
+<div class="g3 mb nb">
+  <div class="dcard">
+    <div class="dcard-t">📊 美 8/17 종가 (약보합·변동성 확대)</div>
+    <div class="dr"><span class="dr-l">S&P500</span><span class="dr-r c-dn">-0.17% (7,785.76)</span></div>
+    <div class="dr"><span class="dr-l">NASDAQ 종합</span><span class="dr-r c-dn">-0.28% (26,729.16)</span></div>
+    <div class="dr"><span class="dr-l">필라델피아 반도체</span><span class="dr-r c-dn">-0.31% (12,417)</span></div>
+    <div class="dr"><span class="dr-l">美 10년물</span><span class="dr-r c-am">4.70% (상승)</span></div>
+    <div class="dr"><span class="dr-l">VIX</span><span class="dr-r c-dn">15.92 (급등)</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">🌏 아시아 8/18 (코리아 급락)</div>
+    <div class="dr"><span class="dr-l">KOSPI</span><span class="dr-r c-dn">-1.55% (6,869.83)</span></div>
+    <div class="dr"><span class="dr-l">KOSDAQ</span><span class="dr-r c-dn">-3.52% (834.20)</span></div>
+    <div class="dr"><span class="dr-l">장중 고가</span><span class="dr-r c-up">7,216.62 (7,200선 돌파)</span></div>
+    <div class="dr"><span class="dr-l">장중 저가권</span><span class="dr-r c-dn">6,800선까지 후퇴</span></div>
+    <div class="dr"><span class="dr-l">고가 대비</span><span class="dr-r c-dn">상승분 전량 반납</span></div>
+  </div>
+  <div class="dcard">
+    <div class="dcard-t">💵 환율·채권·원자재 (원화 강세 · 유가 보합)</div>
+    <div class="dr"><span class="dr-l">USD/KRW</span><span class="dr-r c-up">1,411 (원화 강세)</span></div>
+    <div class="dr"><span class="dr-l">DXY</span><span class="dr-r c-sl">99.6 (보합)</span></div>
+    <div class="dr"><span class="dr-l">WTI</span><span class="dr-r c-sl">84.3 (보합)</span></div>
+    <div class="dr"><span class="dr-l">美 10년물</span><span class="dr-r c-am">4.70% (상승)</span></div>
+    <div class="dr"><span class="dr-l">VIX</span><span class="dr-r c-dn">15.9 (급등)</span></div>
+  </div>
+</div>
+
+<div class="stit nb">🌊 시장 흐름 — 보험·정유·HBM 방어 vs 2차전지·바이오·조선·인터넷 급락</div>
+
+<div class="g2 nb">
+  <div class="flow-card">
+    <div class="flow-hdr">📈 상대 방어 — 보험·정유·해운·HBM</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-up">SK이노베이션</span><span class="flow-desc">정유 대표주 강세 — 유가 지지·방어 성격 매수</span><span class="flow-val c-up">+2.18%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">삼성화재</span><span class="flow-desc">보험 대장주 강세 — 금리·방어주 선호</span><span class="flow-val c-up">+1.79%</span></div>
+      <div class="flow-r"><span class="flow-sec c-up">SK하이닉스</span><span class="flow-desc">HBM 대장주 강세 — 반도체 상대 방어력</span><span class="flow-val c-up">+1.03%</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">시사점</span><span class="flow-desc">급락장에서 보험·정유·통신 같은 방어주와 유가 관련주, HBM 대형주로만 방어 매수가 몰리며 좁은 온기가 나타난 장세</span><span class="flow-val c-up">방어주 쏠림</span></div>
+    </div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hdr">📉 급락 주도 — 2차전지·바이오·조선·인터넷</div>
+    <div class="flow-body">
+      <div class="flow-r"><span class="flow-sec c-dn">에코프로</span><span class="flow-desc">2차전지 대장주 급락 — 오늘 낙폭 최대</span><span class="flow-val c-dn">-6.94%</span></div>
+      <div class="flow-r"><span class="flow-sec c-dn">에코프로비엠</span><span class="flow-desc">양극재 대표주 급락 — 배터리 광역 약세</span><span class="flow-val c-dn">-6.51%</span></div>
+      <div class="flow-r"><span class="flow-sec c-dn">삼성SDI</span><span class="flow-desc">배터리 대표주 급락 — 되돌림 매물 집중</span><span class="flow-val c-dn">-5.43%</span></div>
+      <div class="flow-r"><span class="flow-sec c-dn">한화오션</span><span class="flow-desc">조선 대표주 급락 — 조선 광역 차익 실현</span><span class="flow-val c-dn">-5.11%</span></div>
+      <div class="flow-r"><span class="flow-sec c-am">시사점</span><span class="flow-desc">그간 급등했던 2차전지·바이오·조선·인터넷 성장주에 차익 실현 매물이 광역으로 쏟아지며 지수 급락을 주도한 장세</span><span class="flow-val c-dn">성장주 급락</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ftr"><p>📊 페이지 2 / 3 · 종목 하이라이트 · 매크로 · 흐름 분기</p></div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page page-break">
+
+<div class="stit nb">🧠 종목·테마 분석 (장중 급등 반납 + 기관 대량 매도 + 성장주 광역 급락 + 방어주 쏠림)</div>
+
+<div class="ins i-blue nb">
+  <span class="ins-tag" style="background:var(--blue-bg);color:var(--blue);">코스피 장중 7,200 돌파 후 급반락</span>
+  <h3>코스피가 장 초반 7,200선을 밟았다가 상승분을 전량 반납하고 급반락했다</h3>
+  <p>코스피가 장 초반 강세 출발로 7,200선을 처음 밟으며 사상 최고가를 새로 썼으나, 오후 들어 매수세가 급격히 식으면서 상승분을 전량 반납하고 오히려 급반락 마감했다. 하루 동안 고점과 종가의 낙차가 매우 컸던 극단적 반전 장세로, 그간 가팔랐던 랠리에 대한 되돌림 부담이 한꺼번에 표출됐다. 코스닥은 성장주 비중이 커 더 가파른 급락세를 보이며 코스피보다 낙폭이 두 배 이상 벌어졌다.</p>
+</div>
+
+<div class="ins i-red nb">
+  <span class="ins-tag" style="background:var(--red-bg);color:var(--red);">수급 · 기관 대량 순매도</span>
+  <h3>기관이 대량 순매도로 지수를 끌어내렸고 개인 매수는 방어에 그쳤다</h3>
+  <p>코스피와 코스닥 모두 기관이 대량 순매도로 지수를 끌어내린 반면, 개인은 급락 구간에서 저가 매수로 낙폭 방어에 나섰으나 되돌리기에는 역부족이었다. 외국인은 소폭 순매수에 그쳐 지수 지지력이 약했다. 양대 시장을 합친 기관 순매도 규모가 하루 기준으로 크게 확대되며, 장 초반 급등을 이끈 매수 온기가 오후에 급격히 식었음을 보여줬다.</p>
+</div>
+
+<div class="ins i-amber nb">
+  <span class="ins-tag" style="background:var(--amber-bg);color:var(--amber);">성장주 광역 급락 · 방어주 쏠림</span>
+  <h3>그간 급등했던 성장주에 차익 실현이 광역으로 쏟아졌다</h3>
+  <p>2차전지·바이오·조선·인터넷 등 최근 랠리를 주도했던 성장·경기 대형주에 차익 실현 매물이 광역으로 쏟아지며 지수 급락을 이끌었다. 반면 보험·통신·정유·해운 같은 방어·가치주와 유가 관련주로만 좁은 매수가 몰리며 방어주 쏠림이 뚜렷했다. 급등 폭이 컸던 종목일수록 되돌림 낙폭이 컸던 만큼, 매기가 성장주에서 방어주로 옮겨가는 순환의 성격이 짙어졌다.</p>
+</div>
+
+<div class="ins i-slate nb">
+  <span class="ins-tag" style="background:var(--slate6);color:var(--slate);">원화 강세 · VIX 급등 · 위험회피</span>
+  <h3>원화는 강세로 안정됐으나 글로벌 변동성 지표는 급등했다</h3>
+  <p>간밤 미국 증시가 약보합에 그치고 반도체가 약세를 보인 가운데 변동성 지표가 급등하며 글로벌 위험회피 심리가 강해졌고, 이 흐름이 국내 성장주 급락으로 이어졌다. 원화는 달러 안정 속에 강세로 마감했으나 국내 증시 방어에는 크게 기여하지 못했다. 앞으로의 관건은 급등 되돌림이 어디에서 진정되는지, 그리고 글로벌 변동성 확대와 미국 물가·금리 흐름이 위험선호를 어느 방향으로 돌리는지다.</p>
+</div>
+
+<div class="g2 nb mb">
+  <div class="strat">
+    <div class="strat-mode">📋 단계별 전략</div>
+    <ul class="strat-list">
+      <li><span class="bullet">1</span><span><b>「급등 되돌림」 진정 여부 확인</b> — 장 초반 고점 반납 이후 급락이 하루로 그치는지, 추가 조정으로 이어지는지 추적.</span></li>
+      <li><span class="bullet">2</span><span><b>기관 「매도 지속」 점검</b> — 대량 순매도로 지수를 끌어내린 기관 수급이 진정되는지가 반등의 1차 척도.</span></li>
+      <li><span class="bullet">3</span><span><b>성장주 「낙폭 과대」 대응</b> — 2차전지·바이오·조선의 급락이 과대 낙폭인지, 추세 훼손인지 선별 대응.</span></li>
+      <li><span class="bullet">4</span><span><b>「방어주·글로벌 변동성」 점검</b> — 보험·통신·정유로 쏠린 방어 매수와 VIX 급등 등 글로벌 변동성 흐름 확인.</span></li>
+    </ul>
+  </div>
+
+  <div class="dcard" style="border-color:#93c5fd;background:#eff6ff;">
+    <div class="dcard-t" style="color:var(--blue);">⚠️ 핵심 리스크</div>
+    <div style="font-size:8pt;color:#1e3a8a;line-height:1.65;">
+      <div style="margin-top:6px;"><b>① 급등 되돌림 확대 위험</b> — 단기 급등한 지수가 고점 반납에 이어 추가 조정으로 이어질 위험.</div>
+      <div style="margin-top:6px;"><b>② 기관 매도 지속 위험</b> — 대량 순매도를 낸 기관 매물이 이어지며 반등을 억누를 위험.</div>
+      <div style="margin-top:6px;"><b>③ 성장주 쏠림 되돌림 위험</b> — 2차전지·바이오·조선 등 쏠렸던 성장주 낙폭이 더 깊어질 위험.</div>
+      <div style="margin-top:6px;"><b>④ 글로벌 변동성 확대 위험</b> — VIX 급등 등 위험회피가 강해지며 외국인 수급을 흔들 위험.</div>
+      <div style="margin-top:6px;"><b>⑤ 미 물가·금리 변수</b> — 금리 상승과 다음 물가 지표가 위험선호 방향을 흔들 위험.</div>
+    </div>
+  </div>
+</div>
+
+<div class="stit nb">📅 향후 일정 (단기 빅이벤트)</div>
+
+<div class="sched mb nb">
+  <div class="dr"><span class="dr-l"><span class="tag b">이번 주</span> 잭슨홀 심포지엄·美 물가·금리 경로 확인</span><span class="dr-r c-am">매크로 분기점</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag r">상시</span> 급등 되돌림 진정 여부·낙폭 과대 성장주 반등력 점검</span><span class="dr-r c-dn">모멘텀 변수</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag y">상시</span> 기관 대량 순매도 진정·외국인 매수 회복 여부 점검</span><span class="dr-r c-am">수급 변수</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag g">상시</span> 2차전지·바이오·조선 밸류체인 낙폭·순환매 흐름 점검</span><span class="dr-r c-gn">펀더멘털 변수</span></div>
+  <div class="dr"><span class="dr-l"><span class="tag s">상시</span> 글로벌 변동성·美 반도체·AI 캐펙스·위험선호 흐름</span><span class="dr-r c-sl">글로벌 변수</span></div>
+</div>
+
+<div class="summ nb">
+  <div class="summ-hdr">💡 오늘의 핵심 3줄 요약</div>
+  <div class="summ-body">
+    <div class="summ-item"><span class="summ-n">1</span><span class="summ-t"><b>코스피 6,869.83 (-1.55%) 장중 7,200선 돌파 후 급반락·코스닥 834.20 (-3.52%) 3%대 급락</b> — 장 초반 급등분 전량 반납.</span></div>
+    <div class="summ-item"><span class="summ-n">2</span><span class="summ-t"><b>기관 대량 순매도 주도 vs 개인 매수 방어·외국인 소폭 순매수</b> — 양대 시장 기관 순매도 약 1.2조로 지수 하락 견인.</span></div>
+    <div class="summ-item"><span class="summ-n">3</span><span class="summ-t"><b>2차전지·바이오·조선·인터넷 광역 급락 vs 보험·통신·정유·해운 방어</b> — 원화 강세에도 VIX 급등 등 글로벌 위험회피.</span></div>
+  </div>
+</div>
+
+<div class="ftr">
+  <p>📊 페이지 3 / 3 · 작성: 2026.08.18 화요일 17:00 KST · 데이터 소스: 한국거래소·네이버금융·뉴스핌·파이낸셜뉴스·다음</p>
+  <p>본 자료는 정보 제공 목적이며, 투자 권유나 종목 추천이 아닙니다. 수급은 장 마감 잠정치 기준이며 확정치와 다를 수 있습니다. 투자 판단의 책임은 투자자 본인에게 있습니다.</p>
+</div>
+</div>
+
+</body>
+</html>
